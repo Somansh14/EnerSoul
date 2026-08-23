@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="EnerSoul Healing — Where psychology meets holistic healing. Counselling, energy work and mindfulness with Manila. Book your free 30-minute consultation today." />
+  <meta name="keywords"
+    content="holistic healing, counselling psychologist, emotional wellness, reiki, mindfulness, inner peace, EnerSoul Healing" />
+  <meta property="og:title" content="EnerSoul Healing — Understanding is where healing begins." />
+  <meta property="og:description"
+    content="A holistic emotional wellness practice where psychology and energy healing come together for deeper self-understanding and transformation." />
+  <title>EnerSoul Healing — Understanding is where healing begins.</title>
+
+  <!-- Favicon — Minimalist star/diamond -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A96C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z'/></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── SVG Icon System ── */
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* Reason icon wrapper — uses gradient fill circle */
+    .reason-icon .icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .reason-icon {
+      color: var(--sage-deep);
+    }
+
+    /* Timeline node icon */
+    .timeline-node .icon {
+      width: 22px;
+      height: 22px;
+      color: var(--gold);
+    }
+
+    /* Modality icon — larger */
+    .modality-icon .icon {
+      width: 36px;
+      height: 36px;
+      color: var(--sage-deep);
+    }
+
+    /* Pillar label icon */
+    .pillar__icon {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Gold divider lotus */
+    .gold-divider__lotus .icon {
+      width: 22px;
+      height: 22px;
+      color: var(--gold);
+      opacity: 0.9;
+    }
+
+    /* CTA check icon */
+    .cta-check-icon .icon {
+      width: 18px;
+      height: 18px;
+      color: var(--gold-light);
+    }
+
+    /* Footer lotus */
+    .footer-lotus .icon {
+      width: 28px;
+      height: 28px;
+      color: rgba(196, 169, 108, 0.5);
+    }
+
+    /* Button arrow */
+    .btn-arrow .icon {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover .btn-arrow .icon {
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       SVG ICON SPRITE (hidden)
+  ════════════════════════════════════════ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+
+      <!-- Lotus / divider motif (changed to 4-point star) -->
+      <symbol id="icon-lotus" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z" />
+      </symbol>
+
+      <!-- Cycle / patterns (reason 1) -->
+      <symbol id="icon-cycle" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 2l4 4-4 4" />
+        <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+        <path d="M7 22l-4-4 4-4" />
+        <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+      </symbol>
+
+      <!-- Waves / overwhelm (reason 2) -->
+      <symbol id="icon-waves" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+        <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+        <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+      </symbol>
+
+      <!-- Search / something isn't right (reason 3) -->
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+        <line x1="11" y1="8" x2="11" y2="14" />
+        <line x1="8" y1="11" x2="14" y2="11" />
+      </symbol>
+
+      <!-- Seedling / ready to understand (reason 4) -->
+      <symbol id="icon-seedling" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22V12" />
+        <path d="M12 12C12 12 6 11 6 6C6 6 9 3 12 6C15 3 18 6 18 6C18 11 12 12 12 12Z" />
+        <path d="M12 22C12 22 8 19 8 16" />
+      </symbol>
+
+      <!-- Star / spiritual seeker (reason 5) -->
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+
+      <!-- Eye / understanding (timeline 1) -->
+      <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+
+      <!-- Lightbulb / awareness (timeline 2) -->
+      <symbol id="icon-bulb" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18h6" />
+        <path d="M10 22h4" />
+        <path
+          d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+      </symbol>
+
+      <!-- Milestone / choice (timeline 3) -->
+      <symbol id="icon-branch" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 13v8" />
+        <path d="M12 3v3" />
+        <path d="M4 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h13l4-3.5L17 6Z" />
+      </symbol>
+
+      <!-- Leaf / action (timeline 4) -->
+      <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+      </symbol>
+
+      <!-- Sun / healing (timeline 5) -->
+      <symbol id="icon-healing" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </symbol>
+
+      <!-- Layers / psychology (modality 1) -->
+      <symbol id="icon-brain" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+        <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+        <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+      </symbol>
+
+      <!-- Heart-hands / counselling (modality 2) -->
+      <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </symbol>
+
+      <!-- Feather / mindfulness (modality 3) -->
+      <symbol id="icon-feather" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+        <line x1="16" y1="8" x2="2" y2="22" />
+        <line x1="17.5" y1="15" x2="9" y2="15" />
+      </symbol>
+
+      <!-- Zap / energy healing (modality 4) -->
+      <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+      </symbol>
+
+      <!-- Circle-dot / Mind pillar -->
+      <symbol id="icon-mind" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </symbol>
+
+      <!-- Ripple / Emotion pillar -->
+      <symbol id="icon-emotion" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2a10 10 0 0 1 0 20" />
+        <path d="M12 2a10 10 0 0 0 0 20" />
+      </symbol>
+
+      <!-- Sparkles / Energy pillar -->
+      <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+        <path d="M5 3v4" />
+        <path d="M19 17v4" />
+        <path d="M3 5h4" />
+        <path d="M17 19h4" />
+      </symbol>
+
+      <!-- Moon / Subconscious pillar -->
+      <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </symbol>
+
+      <!-- Infinity / Soul pillar -->
+      <symbol id="icon-infinity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" />
+        <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" />
+      </symbol>
+
+      <!-- Check / CTA list -->
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="9 12 11 14 15 10" />
+      </symbol>
+
+      <!-- Arrow right / buttons -->
+      <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </symbol>
+
+    </defs>
+  </svg>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="EnerSoul Healing home">
+        <img src="assets/logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="nav-logo__img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#hero" id="nav-home">Home</a></li>
+        <li><a href="#section-about" id="nav-about">About</a></li>
+        <li><a href="#section-modalities" id="nav-learn">Services</a></li>
+        <li><a href="#section-cta" id="nav-connect">Connect</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#section-cta" class="btn btn--outline" id="nav-book-btn">Book a Call</a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="#hero" id="mobile-nav-home">Home</a>
+    <a href="#section-about" id="mobile-nav-about">About</a>
+    <a href="#section-modalities" id="mobile-nav-services">Services</a>
+    <a href="#section-philosophy" id="mobile-nav-philosophy">Philosophy</a>
+    <a href="#section-cta" id="mobile-nav-connect" class="btn btn--primary" style="margin-top:1rem;">Book a Free
+      Call</a>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       HERO — SECTION 1
+  ════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero section">
+
+    <div class="hero-bg" aria-hidden="true"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Botanical SVG corner decorations -->
+    <svg class="botanical-corner botanical-corner--tl" width="220" height="200" viewBox="0 0 220 200" fill="none"
+      aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.6" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.5" />
+      <ellipse cx="140" cy="45" rx="20" ry="10" fill="#8FAF8B" transform="rotate(-60 140 45)" opacity="0.4" />
+      <ellipse cx="35" cy="145" rx="22" ry="11" fill="#8FAF8B" transform="rotate(-15 35 145)" opacity="0.5" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.5" />
+      <circle cx="98" cy="58" r="2" fill="#C4A96C" opacity="0.4" />
+      <circle cx="130" cy="38" r="2.5" fill="#C4A96C" opacity="0.35" />
+    </svg>
+
+    <svg class="botanical-corner botanical-corner--br" width="250" height="230" viewBox="0 0 250 230" fill="none"
+      aria-hidden="true">
+      <path d="M240,50 Q220,110 170,150 Q120,190 60,210" stroke="#8FAF8B" stroke-width="1.5" fill="none"
+        opacity="0.7" />
+      <ellipse cx="190" cy="120" rx="30" ry="15" fill="#8FAF8B" transform="rotate(30 190 120)" opacity="0.6" />
+      <ellipse cx="150" cy="160" rx="26" ry="13" fill="#8FAF8B" transform="rotate(50 150 160)" opacity="0.5" />
+      <ellipse cx="110" cy="192" rx="22" ry="11" fill="#8FAF8B" transform="rotate(60 110 192)" opacity="0.45" />
+      <circle cx="200" cy="108" r="3" fill="#C4A96C" opacity="0.5" />
+      <circle cx="162" cy="148" r="2" fill="#C4A96C" opacity="0.4" />
+    </svg>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow__line" aria-hidden="true"></div>
+          <span class="section-label">EnerSoul Healing</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Understanding is<br />
+          where <em>healing begins.</em>
+        </h1>
+
+        <p class="hero-subheading">
+          Sometimes we try to change what we feel without understanding what's creating it.
+          <strong>My role is to help you understand yourself more deeply,</strong>
+          so that lasting change becomes possible.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#section-cta" class="btn btn--gold btn--lg" id="hero-cta-primary">
+            Book Your Free Consultation
+            <span class="btn-arrow"><svg class="icon">
+                <use href="#icon-arrow" />
+              </svg></span>
+          </a>
+          <a href="#section-reasons" class="btn btn--outline" id="hero-cta-secondary">
+            Explore My Work
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll__text">Scroll</span>
+      <div class="hero-scroll__line"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       YOU MAY BE HERE — SECTION 2
+  ════════════════════════════════════════ -->
+  <section id="section-reasons" aria-label="Why you may be here">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tr" width="180" height="160" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.8" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.7" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.6" />
+      <ellipse cx="140" cy="45" rx="20" ry="10" fill="#8FAF8B" transform="rotate(-60 140 45)" opacity="0.5" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.5" />
+      <circle cx="98" cy="58" r="2" fill="#C4A96C" opacity="0.4" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--bl" width="160" height="140" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#C4A96C" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.6" />
+      <ellipse cx="35" cy="145" rx="22" ry="11" fill="#8FAF8B" transform="rotate(-15 35 145)" opacity="0.55" />
+      <circle cx="130" cy="38" r="2.5" fill="#C4A96C" opacity="0.35" />
+    </svg>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">You May Be Here Because…</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <h2>Something inside you<br /><em>is asking to be heard.</em></h2>
+      </div>
+
+      <div class="reasons-grid stagger-children">
+
+        <div class="reason-card reason-card--wide" id="reason-card-1">
+          <div class="reason-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-cycle" />
+            </svg>
+          </div>
+          <h3>You keep repeating the same patterns.</h3>
+          <p>The same relationships. The same emotional reactions. The same questions.
+            Even when you're trying to change.</p>
+        </div>
+
+        <div class="reason-card" id="reason-card-2">
+          <div class="reason-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-waves" />
+            </svg>
+          </div>
+          <h3>You feel emotionally overwhelmed.</h3>
+          <p>Your mind rarely slows down. Your emotions feel heavy.
+            You're carrying more than you know how to put down.</p>
+        </div>
+
+        <div class="reason-card" id="reason-card-3">
+          <div class="reason-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-search" />
+            </svg>
+          </div>
+          <h3>You know something isn't right.</h3>
+          <p>You can feel it. You just don't know where it's coming from.</p>
+        </div>
+
+        <div class="reason-card" id="reason-card-4">
+          <div class="reason-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-seedling" />
+            </svg>
+          </div>
+          <h3>You're ready to understand.</h3>
+          <p>Finally, you are ready to face whatever is going on inside of you
+            affecting your life.</p>
+        </div>
+
+        <div class="reason-card reason-card--wide" id="reason-card-5">
+          <div class="reason-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-star" />
+            </svg>
+          </div>
+          <h3>You are a curious spiritual seeker.</h3>
+          <p>You are on your spiritual journey and probably feel stuck or confused.
+            Something deeper is calling you forward.</p>
+        </div>
+
+      </div>
+
+      <div class="reasons-bottom reveal">
+        <p>"Whatever has brought you here deserves to be understood with compassion."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CHANGE NARRATIVE — SECTION 3
+  ════════════════════════════════════════ -->
+  <section id="section-change" aria-label="Understanding change">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tl" width="200" height="180" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#C4A96C" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#C4A96C" transform="rotate(-30 60 110)" opacity="0.5" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.55" />
+      <circle cx="58" cy="95" r="2.5" fill="#C4A96C" opacity="0.45" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--br" width="200" height="180" viewBox="0 0 250 230" fill="none" aria-hidden="true">
+      <path d="M240,50 Q220,110 170,150 Q120,190 60,210" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="190" cy="120" rx="30" ry="15" fill="#8FAF8B" transform="rotate(30 190 120)" opacity="0.6" />
+      <ellipse cx="150" cy="160" rx="26" ry="13" fill="#C4A96C" transform="rotate(50 150 160)" opacity="0.5" />
+      <circle cx="200" cy="108" r="3" fill="#C4A96C" opacity="0.45" />
+    </svg>
+    <div class="container">
+      <div class="change-grid">
+
+        <div class="change-left reveal reveal--left">
+          <span class="section-label">The Challenge</span>
+          <div class="gold-divider" aria-hidden="true">
+            <span class="gold-divider__lotus"><svg class="icon">
+                <use href="#icon-lotus" />
+              </svg></span>
+          </div>
+          <h2>You may have tried to <span>change before.</span></h2>
+
+          <ul class="change-list" role="list">
+            <li><span class="change-list__dot" aria-hidden="true"></span>To stop overthinking.</li>
+            <li><span class="change-list__dot" aria-hidden="true"></span>To move on.</li>
+            <li><span class="change-list__dot" aria-hidden="true"></span>To react differently.</li>
+            <li><span class="change-list__dot" aria-hidden="true"></span>To feel better.</li>
+          </ul>
+        </div>
+
+        <div class="change-right reveal reveal--right">
+          <div class="change-quote">
+            <p>But changing the behaviour is often the hardest place to begin. Because beneath every behaviour are
+              experiences, beliefs, emotions and patterns that quietly shape how you respond to life.</p>
+          </div>
+          <div
+            style="margin-top: 1.5rem; padding: 2rem; background: linear-gradient(135deg, rgba(143,175,139,0.12), rgba(196,169,108,0.08)); border-radius: 16px; border: 1px solid rgba(196,169,108,0.2);">
+            <p
+              style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--forest); font-style: italic; margin: 0;">
+              When you begin to understand those deeper layers, change becomes <strong>clearer, more intentional, and
+                more sustainable.</strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       APPROACH TIMELINE — SECTION 4
+  ════════════════════════════════════════ -->
+  <section id="section-approach" aria-label="My approach">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tr" width="170" height="150" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.75" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.65" />
+      <ellipse cx="140" cy="45" rx="20" ry="10" fill="#C4A96C" transform="rotate(-60 140 45)" opacity="0.45" />
+      <circle cx="98" cy="58" r="2" fill="#C4A96C" opacity="0.5" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--bl" width="170" height="150" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="35" cy="145" rx="22" ry="11" fill="#8FAF8B" transform="rotate(-15 35 145)" opacity="0.6" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#C4A96C" transform="rotate(-50 100 70)" opacity="0.45" />
+      <circle cx="130" cy="38" r="2.5" fill="#C4A96C" opacity="0.4" />
+    </svg>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">My Approach</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <h2>A journey from within,<br /><em>outward.</em></h2>
+      </div>
+
+      <div class="approach-intro">
+        <span class="start-label">Something doesn't feel right…</span>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-item" role="listitem" id="timeline-1">
+          <div class="timeline-node" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-eye" />
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 01</div>
+            <h3>Understanding</h3>
+            <p class="timeline-q">"What is happening?"</p>
+            <p>Understanding what you're experiencing.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" id="timeline-2">
+          <div class="timeline-node" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-bulb" />
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 02</div>
+            <h3>Awareness</h3>
+            <p class="timeline-q">"Why does it keep happening?"</p>
+            <p>Recognising what lies beneath it.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" id="timeline-3">
+          <div class="timeline-node" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-branch" />
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 03</div>
+            <h3>Choice</h3>
+            <p class="timeline-q">"What can I do differently?"</p>
+            <p>Choosing a different response.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" id="timeline-4">
+          <div class="timeline-node" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-leaf" />
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 04</div>
+            <h3>Action</h3>
+            <p class="timeline-q">"Can I practise this new response?"</p>
+            <p>Turning awareness into change.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" id="timeline-5">
+          <div class="timeline-node" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-healing" />
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 05</div>
+            <h3>Healing</h3>
+            <p class="timeline-q">"Can I move forward differently?"</p>
+            <p>Living with greater clarity, connection and freedom.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="timeline-end">
+        <span class="end-tag">Greater clarity, connection &amp; freedom.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       HOW WE WORK TOGETHER — SECTION 5
+  ════════════════════════════════════════ -->
+  <section id="section-modalities" aria-label="How we work together">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tl" width="190" height="170" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.8" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.65" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.55" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.45" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--br" width="220" height="200" viewBox="0 0 250 230" fill="none" aria-hidden="true">
+      <path d="M240,50 Q220,110 170,150 Q120,190 60,210" stroke="#C4A96C" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="190" cy="120" rx="30" ry="15" fill="#8FAF8B" transform="rotate(30 190 120)" opacity="0.6" />
+      <ellipse cx="110" cy="192" rx="22" ry="11" fill="#C4A96C" transform="rotate(60 110 192)" opacity="0.5" />
+      <circle cx="162" cy="148" r="2" fill="#C4A96C" opacity="0.45" />
+    </svg>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">How We Work Together</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <h2>Understanding is<br /><em>only the beginning.</em></h2>
+        <p>Real change happens when understanding is supported with the right tools,<br />at the right time, in the
+          right way.</p>
+      </div>
+
+      <div class="modalities-grid">
+
+        <div class="modality-card" id="modality-psychology">
+          <span class="modality-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-brain" />
+            </svg>
+          </span>
+          <h3>Psychology</h3>
+          <p>Understand your thoughts, emotions, behaviours and patterns through evidence-based psychological
+            principles.</p>
+        </div>
+
+        <div class="modality-card" id="modality-counselling">
+          <span class="modality-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-heart" />
+            </svg>
+          </span>
+          <h3>Counselling</h3>
+          <p>A safe, non-judgmental space to explore your experiences, emotions and challenges with honesty and
+            compassion.</p>
+        </div>
+
+        <div class="modality-card" id="modality-mindfulness">
+          <span class="modality-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-feather" />
+            </svg>
+          </span>
+          <h3>Mindfulness &amp; Meditation</h3>
+          <p>Develop greater awareness, emotional balance and presence through simple practices that support your
+            everyday life.</p>
+        </div>
+
+        <div class="modality-card" id="modality-energy">
+          <span class="modality-icon" aria-hidden="true">
+            <svg class="icon">
+              <use href="#icon-sparkles" />
+            </svg>
+          </span>
+          <h3>Energy Healing</h3>
+          <p>Create space for deep relaxation, emotional processing and inner awareness through energy-based practices.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="modalities-closing reveal">
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <p>Different tools. One purpose.<br />
+          <em>To help you understand yourself, heal what no longer serves you, and move forward with greater
+            clarity.</em>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WHAT YOU'LL CARRY FORWARD — SECTION 6
+  ════════════════════════════════════════ -->
+  <section id="section-outcomes" aria-label="What you'll carry forward">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tr" width="180" height="160" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#C4A96C" stroke-width="1.5" fill="none" opacity="0.75" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#C4A96C" transform="rotate(-30 60 110)" opacity="0.55" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.5" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.5" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--bl" width="180" height="160" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="35" cy="145" rx="22" ry="11" fill="#8FAF8B" transform="rotate(-15 35 145)" opacity="0.6" />
+      <ellipse cx="140" cy="45" rx="20" ry="10" fill="#C4A96C" transform="rotate(-60 140 45)" opacity="0.4" />
+      <circle cx="130" cy="38" r="2.5" fill="#C4A96C" opacity="0.35" />
+    </svg>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">What You'll Carry Forward</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <h2>Every session leaves you<br /><em>with something real.</em></h2>
+        <p>Every session is intended to leave you with something you can continue using in your everyday life—not just
+          during our time together.</p>
+      </div>
+
+      <div class="outcomes-grid">
+
+        <div class="outcome-card" id="outcome-1">
+          <div class="outcome-number" aria-hidden="true">01</div>
+          <h3>Clarity</h3>
+          <p>Understand what you're feeling and why.</p>
+        </div>
+
+        <div class="outcome-card" id="outcome-2">
+          <div class="outcome-number" aria-hidden="true">02</div>
+          <h3>Self-Awareness</h3>
+          <p>Recognise the patterns that shape your thoughts, emotions and choices.</p>
+        </div>
+
+        <div class="outcome-card" id="outcome-3">
+          <div class="outcome-number" aria-hidden="true">03</div>
+          <h3>Emotional Resilience</h3>
+          <p>Learn healthier ways to respond to life's challenges.</p>
+        </div>
+
+        <div class="outcome-card" id="outcome-4">
+          <div class="outcome-number" aria-hidden="true">04</div>
+          <h3>Confidence</h3>
+          <p>Make decisions with greater trust in yourself.</p>
+        </div>
+
+        <div class="outcome-card" id="outcome-5">
+          <div class="outcome-number" aria-hidden="true">05</div>
+          <h3>Self-Compassion</h3>
+          <p>Meet yourself with understanding instead of judgment.</p>
+        </div>
+
+        <div class="outcome-card" id="outcome-6">
+          <div class="outcome-number" aria-hidden="true">06</div>
+          <h3>Practical Tools</h3>
+          <p>Simple practices you can continue using in your everyday life.</p>
+        </div>
+
+      </div>
+
+      <div class="outcomes-closing reveal">
+        <p>The goal is to become more connected with yourself.<br />
+          <em>Using your healing journey as a tool to navigate life.</em>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT MANILA — SECTION 7
+  ════════════════════════════════════════ -->
+  <section id="section-about" aria-label="About Manila">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tl" width="200" height="180" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.8" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.65" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#C4A96C" transform="rotate(-50 100 70)" opacity="0.5" />
+      <ellipse cx="35" cy="145" rx="22" ry="11" fill="#8FAF8B" transform="rotate(-15 35 145)" opacity="0.55" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.4" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--br" width="200" height="180" viewBox="0 0 250 230" fill="none" aria-hidden="true">
+      <path d="M240,50 Q220,110 170,150 Q120,190 60,210" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.75" />
+      <ellipse cx="190" cy="120" rx="30" ry="15" fill="#C4A96C" transform="rotate(30 190 120)" opacity="0.55" />
+      <ellipse cx="150" cy="160" rx="26" ry="13" fill="#8FAF8B" transform="rotate(50 150 160)" opacity="0.5" />
+      <circle cx="200" cy="108" r="3" fill="#C4A96C" opacity="0.45" />
+    </svg>
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image-wrap reveal reveal--left">
+          <div class="about-image-frame">
+            <img src="images/manila.jpg"
+              alt="Manila — Founder of EnerSoul Healing, Counselling Psychologist and Reiki Grand Master"
+              loading="lazy" />
+          </div>
+          <div class="about-image-badge">
+            <span class="badge-title">Manila</span>
+            <span class="badge-sub">Founder · EnerSoul Healing</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal--right">
+          <p class="greeting">Hello, I'm</p>
+          <h2>Manila</h2>
+          <p class="role-tag">Counselling Psychologist &nbsp;·&nbsp; Reiki Grand Master &nbsp;·&nbsp; Holistic Healing
+            Practitioner</p>
+
+          <div class="gold-divider" aria-hidden="true">
+            <span class="gold-divider__lotus"><svg class="icon">
+                <use href="#icon-lotus" />
+              </svg></span>
+          </div>
+
+          <p>I'm the founder of <strong>EnerSoul Healing</strong>, where psychology and holistic healing come together
+            to support deeper self-understanding and transformation.</p>
+
+          <p>For almost eight years, I built my career in the corporate world — learning about people, behaviour and
+            communication. From the outside, I was building a successful path. But somewhere along the way, I realised
+            that another path was calling me.</p>
+
+          <p>My own experiences with emotional pain, disconnection and healing became a turning point. They led me
+            inward — to understand myself, to explore the deeper layers of healing, and eventually to recognise what I
+            truly wanted to dedicate my life to.</p>
+
+          <div class="about-quote">
+            <p>"I chose to leave behind the path I had known and follow a purpose that felt greater than a career."</p>
+          </div>
+
+          <p>Today, through psychological understanding and holistic practices including <strong>Reiki, meditation,
+              hypnotherapy, tarot and crystal therapy</strong>, I create a space where healing can be explored in a way
+            that is compassionate, intuitive, grounded and deeply personal.</p>
+
+          <p>I understand what it feels like to search for answers, and to slowly find your way back. And perhaps most
+            importantly — <strong>choosing yourself takes courage.</strong></p>
+
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#section-cta" class="btn btn--primary" id="about-cta-btn">
+              Begin Your Journey
+              <span class="btn-arrow"><svg class="icon">
+                  <use href="#icon-arrow" />
+                </svg></span>
+            </a>
+            <a href="#section-philosophy" class="btn btn--outline" id="about-philosophy-btn">Read My Story</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ENERSOUL PHILOSOPHY — SECTION 8
+  ════════════════════════════════════════ -->
+  <section id="section-philosophy" aria-label="The EnerSoul philosophy">
+    <!-- Botanical corners -->
+    <svg class="botanical-corner botanical-corner--tr" width="190" height="170" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+      <path d="M10,180 Q30,120 80,80 Q130,40 180,20" stroke="#8FAF8B" stroke-width="1.5" fill="none" opacity="0.8" />
+      <ellipse cx="60" cy="110" rx="28" ry="14" fill="#8FAF8B" transform="rotate(-30 60 110)" opacity="0.7" />
+      <ellipse cx="100" cy="70" rx="24" ry="12" fill="#8FAF8B" transform="rotate(-50 100 70)" opacity="0.6" />
+      <ellipse cx="140" cy="45" rx="20" ry="10" fill="#C4A96C" transform="rotate(-60 140 45)" opacity="0.5" />
+      <circle cx="58" cy="95" r="3" fill="#C4A96C" opacity="0.5" />
+    </svg>
+    <svg class="botanical-corner botanical-corner--bl" width="190" height="170" viewBox="0 0 250 230" fill="none" aria-hidden="true">
+      <path d="M240,50 Q220,110 170,150 Q120,190 60,210" stroke="#C4A96C" stroke-width="1.5" fill="none" opacity="0.7" />
+      <ellipse cx="190" cy="120" rx="30" ry="15" fill="#8FAF8B" transform="rotate(30 190 120)" opacity="0.6" />
+      <ellipse cx="110" cy="192" rx="22" ry="11" fill="#8FAF8B" transform="rotate(60 110 192)" opacity="0.5" />
+      <circle cx="200" cy="108" r="3" fill="#C4A96C" opacity="0.4" />
+    </svg>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">What Is EnerSoul Healing?</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <h2>Where Energy<br /><em>Meets Psychology.</em></h2>
+      </div>
+
+      <div class="philosophy-grid">
+
+        <div class="philosophy-left reveal reveal--left">
+          <span class="section-label">The Name</span>
+          <p style="margin: 1rem 0;">
+            <strong>ENER</strong> — the energy within and around us.<br />
+            <strong>SOUL</strong> — the deeper dimension of who we are.<br /><br />
+            Together, <strong>EnerSoul</strong> represents working with both — exploring the inner layers that shape us
+            and creating space for deeper alignment, healing and transformation.
+          </p>
+
+          <div class="philosophy-pillars" role="list">
+
+            <div class="pillar" role="listitem" id="pillar-mind">
+              <svg class="icon pillar__icon" aria-hidden="true">
+                <use href="#icon-mind" />
+              </svg>
+              <span class="pillar__label">Mind</span>
+              <span class="pillar__desc">Understand and reshape thought patterns.</span>
+            </div>
+
+            <div class="pillar" role="listitem" id="pillar-emotion">
+              <svg class="icon pillar__icon" aria-hidden="true">
+                <use href="#icon-emotion" />
+              </svg>
+              <span class="pillar__label">Emotion</span>
+              <span class="pillar__desc">Process what has been carried within.</span>
+            </div>
+
+            <div class="pillar" role="listitem" id="pillar-energy">
+              <svg class="icon pillar__icon" aria-hidden="true">
+                <use href="#icon-sparkles" />
+              </svg>
+              <span class="pillar__label">Energy</span>
+              <span class="pillar__desc">Release, restore and realign.</span>
+            </div>
+
+            <div class="pillar" role="listitem" id="pillar-subconscious">
+              <svg class="icon pillar__icon" aria-hidden="true">
+                <use href="#icon-moon" />
+              </svg>
+              <span class="pillar__label">Subconscious</span>
+              <span class="pillar__desc">Explore deeper patterns and conditioning.</span>
+            </div>
+
+            <div class="pillar" role="listitem" id="pillar-soul">
+              <svg class="icon pillar__icon" aria-hidden="true">
+                <use href="#icon-infinity" />
+              </svg>
+              <span class="pillar__label">Soul</span>
+              <span class="pillar__desc">Reconnect with meaning, purpose and inner truth.</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="philosophy-right reveal reveal--right">
+          <div class="philosophy-box">
+            <h4>The Aim</h4>
+            <p>Not simply to help you feel better for a moment. But to support a deeper shift in the way you
+              <strong>think, feel, respond, relate and live.</strong>
+            </p>
+          </div>
+
+          <div class="philosophy-box vision-box">
+            <h4>The Vision</h4>
+            <p><em>Inner healing that creates outer transformation.</em><br /><br />
+              A life lived with greater <strong>awareness, alignment, meaning and connection.</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="closing-mantra reveal">
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+        <p>
+          <span>You are healing.</span><br />
+          You are becoming.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FIRST STEP / CTA — SECTION 9
+  ════════════════════════════════════════ -->
+  <section id="section-cta" aria-label="Book your consultation">
+
+    <div class="container">
+      <div class="cta-content">
+
+        <span class="section-label" style="color: rgba(241,234,216,0.55);">Your First Step</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon" style="color:var(--sage-sand);">
+              <use href="#icon-lotus" />
+            </svg></span>
+        </div>
+
+        <h2>Every journey begins<br />with a conversation.</h2>
+
+        <p class="cta-lead">
+          Choosing the right support is an important decision, and it should never feel rushed.
+          That's why we begin with a <strong style="color: var(--sage-sand);">complimentary 30-minute
+            consultation.</strong>
+        </p>
+
+        <div class="cta-checklist" role="list">
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon">
+                <use href="#icon-check" />
+              </svg></span>
+            <span>Understand what brings you here.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon">
+                <use href="#icon-check" />
+              </svg></span>
+            <span>Explore the challenges you're currently facing.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon">
+                <use href="#icon-check" />
+              </svg></span>
+            <span>Discuss your goals and what you're hoping to work towards.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon">
+                <use href="#icon-check" />
+              </svg></span>
+            <span>Decide together whether we're the right fit.</span>
+          </div>
+        </div>
+
+        <div class="cta-actions">
+          <a href="mailto:hello@enersoulshealing.com" class="btn btn--gold btn--lg" id="cta-book-btn">
+            Book Your Free 30-Minute Consultation
+            <span class="btn-arrow"><svg class="icon">
+                <use href="#icon-arrow" />
+              </svg></span>
+          </a>
+          <p class="cta-note">Complimentary &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; Confidential</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="EnerSoul Healing home">
+            <img src="assets/logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="footer-logo__img" />
+          </a>
+          <p class="footer-tagline">A holistic emotional wellness practice where psychology and energy healing come together for deeper
+            self-understanding and transformation.</p>
+        </div>
+
+        <div class="footer-links">
+          <h5>Navigate</h5>
+          <ul role="list">
+            <li><a href="#hero" id="footer-home">Home</a></li>
+            <li><a href="#section-reasons" id="footer-reasons">Why I'm Here</a></li>
+            <li><a href="#section-approach" id="footer-approach">My Approach</a></li>
+            <li><a href="#section-modalities" id="footer-services">Services</a></li>
+            <li><a href="#section-about" id="footer-about">About Manila</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h5>Connect</h5>
+          <ul role="list">
+            <li><a href="#section-cta" id="footer-book">Book a Consultation</a></li>
+            <li><a href="mailto:hello@enersoulshealing.com" id="footer-email">hello@enersoulshealing.com</a></li>
+            <li><a href="#section-philosophy" id="footer-philosophy">EnerSoul Philosophy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EnerSoul Healing. All rights reserved.</p>
+        <span class="footer-lotus" aria-hidden="true">
+          <svg class="icon">
+            <use href="#icon-lotus" />
+          </svg>
+        </span>
+        <p style="font-family: 'Dancing Script', cursive; font-size: 1rem;" class="footer-mantra">You are
+          healing. You are becoming.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
