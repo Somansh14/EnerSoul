@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Manila — Founder of EnerSoul Healing. Counselling Psychologist, Reiki Grand Master and Holistic Healing Practitioner. Read her story of transformation." />
+  <meta name="keywords"
+    content="Manila EnerSoul, about Manila, counselling psychologist, reiki grand master, holistic healing, EnerSoul Healing story" />
+  <meta property="og:title" content="About Manila — EnerSoul Healing" />
+  <meta property="og:description"
+    content="The story behind EnerSoul Healing — where psychology and holistic healing come together for deeper transformation." />
+  <title>Activities & Events | EnerSoul Healing</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A96C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z'/></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── SVG Icon System ── */
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .reason-icon .icon { width: 28px; height: 28px; }
+    .reason-icon { color: var(--sage-deep); }
+    .timeline-node .icon { width: 22px; height: 22px; color: var(--gold); }
+    .modality-icon .icon { width: 36px; height: 36px; color: var(--sage-deep); }
+    .pillar__icon { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; }
+    .gold-divider__lotus .icon { width: 22px; height: 22px; color: var(--gold); opacity: 0.9; }
+    .cta-check-icon .icon { width: 18px; height: 18px; color: var(--gold-light); }
+    .footer-lotus .icon { width: 28px; height: 28px; color: rgba(196, 169, 108, 0.9); }
+    .btn-arrow .icon { width: 16px; height: 16px; transition: transform 0.3s ease; }
+    .btn:hover .btn-arrow .icon { transform: translateX(5px); }
+
+    /* ── About Page Specific ── */
+
+    /* Hero — full-screen, clears fixed nav */
+    .about-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      /* Clear the fixed navbar (logo 100px + padding ~28px = ~130px) */
+      padding-top: 140px;
+      padding-bottom: 5rem;
+      overflow: hidden;
+    }
+
+    .about-hero__inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .about-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-hero__text {
+      animation: fadeInLeft 0.9s ease both;
+    }
+
+    .about-hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-hero__eyebrow-line {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .about-hero__heading {
+      font-size: clamp(2.6rem, 5vw, 4.6rem);
+      line-height: 1.1;
+      margin-bottom: 1.6rem;
+      color: var(--forest);
+    }
+
+    .about-hero__heading em {
+      font-style: italic;
+      color: var(--sage-deep);
+    }
+
+    .about-hero__subtext {
+      font-size: 1.05rem;
+      color: var(--taupe);
+      line-height: 1.8;
+      max-width: 460px;
+      margin-bottom: 2rem;
+    }
+
+    .about-hero__image-col {
+      position: relative;
+      animation: fadeInRight 0.9s ease 0.2s both;
+      /* Prevent the image column from overflowing upward */
+      padding-top: 1rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .about-hero__frame {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      /* Cap height so it doesn't punch through the navbar */
+      max-height: 540px;
+      background: var(--cream-dark);
+    }
+
+    .about-hero__frame img {
+      width: 100%;
+      height: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-hero__frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(45,74,45,0.16) 100%);
+      z-index: 1;
+      border-radius: 24px;
+    }
+
+    .about-hero__frame-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 32px;
+      border: 1px solid rgba(196,169,108,0.28);
+      pointer-events: none;
+      /* Keep ring inside the image col bounds */
+      top: -12px;
+      bottom: 14px;
+    }
+
+    .about-hero__badge {
+      position: absolute;
+      bottom: 0;
+      left: -16px;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.4rem;
+      box-shadow: var(--shadow-gold);
+      z-index: 3;
+    }
+
+    .about-hero__badge-name {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--forest);
+      font-weight: 600;
+    }
+
+    .about-hero__badge-roles {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--taupe);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    /* Story Section — alternating narrative blocks */
+    .story-section {
+      padding: 9rem 0;
+      position: relative;
+      background: var(--cream);
+    }
+
+    .story-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 6rem;
+    }
+
+    .story-intro h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .story-intro p {
+      color: var(--taupe);
+      font-size: 1.05rem;
+    }
+
+    /* Narrative blocks */
+    .narrative-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .narrative-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 5rem 0;
+      border-top: 1px solid rgba(196,169,108,0.18);
+    }
+
+    .narrative-block:last-child {
+      border-bottom: 1px solid rgba(196,169,108,0.18);
+    }
+
+    .narrative-block--reverse .narrative-block__text {
+      order: 2;
+    }
+
+    .narrative-block--reverse .narrative-block__visual {
+      order: 1;
+    }
+
+    .narrative-block__label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: var(--font-body);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .narrative-block__text h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      color: var(--forest);
+      margin-bottom: 1.2rem;
+      line-height: 1.25;
+    }
+
+    .narrative-block__text h3 em {
+      font-style: italic;
+      color: var(--sage-deep);
+    }
+
+    .narrative-block__text p {
+      color: var(--taupe);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .narrative-block__text p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .narrative-block__visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Pullquote card for visual column */
+    .pullquote-card {
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pullquote-card::before {
+      content: '\201C';
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 8rem;
+      color: var(--gold);
+      opacity: 0.12;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .pullquote-card p {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      font-style: italic;
+      color: var(--forest);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .pullquote-card__attr {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: var(--font-body);
+    }
+
+    /* Credential pills */
+    .credential-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .credential-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(143,175,139,0.14), rgba(196,169,108,0.1));
+      border: 1px solid rgba(196,169,108,0.3);
+      border-radius: 100px;
+      padding: 0.45rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .credential-chip svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Visual accent box */
+    .accent-box {
+      background: linear-gradient(135deg, rgba(143,175,139,0.12), rgba(196,169,108,0.08));
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      border: 1px solid rgba(196,169,108,0.22);
+      position: relative;
+    }
+
+    .accent-box__number {
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      color: var(--gold);
+      opacity: 0.18;
+      line-height: 1;
+      position: absolute;
+      top: 1.2rem;
+      right: 1.8rem;
+      pointer-events: none;
+    }
+
+    .accent-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 0.8rem;
+    }
+
+    .accent-box p {
+      color: var(--taupe);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Closing statement band */
+    .about-closing {
+      margin-top: 4rem;
+      padding: 3rem 4rem;
+      background: linear-gradient(135deg, rgba(45,74,45,0.06), rgba(196,169,108,0.08));
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--gold);
+      text-align: center;
+    }
+
+    .about-closing p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+      color: var(--forest);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Philosophy Section ── */
+    .philosophy-intro-text {
+      max-width: 640px;
+      margin: 0 auto 1rem;
+      text-align: center;
+      color: var(--taupe);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* What EnerSoul Stands For — name breakdown */
+    .ener-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .ener-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ener-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sage), var(--gold));
+      opacity: 0.6;
+    }
+
+    .ener-card__word {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--forest);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .ener-card__word em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .ener-card__def {
+      font-size: 0.98rem;
+      color: var(--taupe);
+      line-height: 1.7;
+    }
+
+    /* Pillars — styled like the home modality grid */
+    .pillars-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .pillars-heading h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--forest);
+    }
+
+    .pillars-grid-new {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 900px) {
+      .pillars-grid-new { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .pillars-grid-new { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .pillar-card-new {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card-new:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .pillar-card-new__icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      background: linear-gradient(135deg, rgba(143,175,139,0.18), rgba(196,169,108,0.14));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sage-deep);
+    }
+
+    .pillar-card-new__icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .pillar-card-new__label {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--forest);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-card-new__desc {
+      font-size: 0.82rem;
+      color: var(--taupe);
+      line-height: 1.6;
+    }
+
+    /* Aim + Vision two-column */
+    .aim-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .aim-vision-card {
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aim-vision-card--aim {
+      background: linear-gradient(135deg, rgba(45,74,45,0.07), rgba(143,175,139,0.1));
+      border: 1px solid rgba(143,175,139,0.3);
+    }
+
+    .aim-vision-card--vision {
+      background: linear-gradient(135deg, rgba(196,169,108,0.1), rgba(196,169,108,0.05));
+      border: 1px solid rgba(196,169,108,0.3);
+    }
+
+    .aim-vision-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    .aim-vision-card p {
+      color: var(--taupe);
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    /* Closing mantra */
+    .closing-mantra {
+      text-align: center;
+      padding: 5rem 0 2rem;
+    }
+
+    .closing-mantra p {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--forest);
+      line-height: 1.5;
+    }
+
+    .closing-mantra span {
+      color: var(--sage-deep);
+      font-style: italic;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .about-hero {
+        padding-top: 120px;
+        padding-bottom: 4rem;
+        min-height: auto;
+      }
+      .about-hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-hero__image-col { order: -1; max-width: 380px; margin: 0 auto; padding-bottom: 2rem; }
+      .about-hero__frame { max-height: 420px; }
+      .about-hero__frame img { max-height: 420px; }
+      .about-hero__heading { font-size: clamp(2.2rem, 7vw, 3rem); }
+      .about-hero__subtext { max-width: 100%; }
+      .narrative-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .narrative-block--reverse .narrative-block__text { order: 0; }
+      .narrative-block--reverse .narrative-block__visual { order: 0; }
+      .ener-breakdown { grid-template-columns: 1fr; }
+      .aim-vision-grid { grid-template-columns: 1fr; }
+      .about-closing { padding: 2.5rem; }
+      .about-hero__badge { left: 0; bottom: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .pullquote-card { padding: 2rem; }
+      .narrative-block { padding: 3rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SVG ICON SPRITE (hidden) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="icon-lotus" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z" />
+      </symbol>
+      <symbol id="icon-mind" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="icon-emotion" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" /><path d="M12 2a10 10 0 0 1 0 20" /><path d="M12 2a10 10 0 0 0 0 20" />
+      </symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+        <path d="M5 3v4" /><path d="M19 17v4" /><path d="M3 5h4" /><path d="M17 19h4" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </symbol>
+      <symbol id="icon-infinity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" />
+        <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" /><polyline points="9 12 11 14 15 10" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+      <symbol id="icon-healing" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" /><path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a href="index.html#hero" class="nav-logo" aria-label="EnerSoul Healing home">
+        <img src="assets/new_logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="nav-logo__img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="index.html#section-modalities">Services</a></li>
+  <li><a href="blog.html">Insights</a></li>
+</ul>
+
+      <div class="nav-cta">
+        <a href="updates.html" class="btn btn--gold" style="margin-right: 1rem;">Activities</a>
+        <a href="index.html#section-cta" class="btn btn--outline" id="nav-book-btn">Request a Call</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="index.html#section-modalities">Services</a>
+  <a href="blog.html">Insights</a>
+  <a href="about.html#section-philosophy">Philosophy</a>
+  <a href="updates.html" class="btn btn--gold" style="margin-top:1rem;">Activities</a>
+    <a href="index.html#section-cta" class="btn btn--primary" style="margin-top:1rem;">Request a Call</a>
+</div>
+
+
+  <!-- ════════════════════════════════════════
+       UPDATES HERO
+  ════════════════════════════════════════ -->
+  <section class="about-hero" aria-labelledby="page-title" style="min-height: 50vh; padding-bottom: 2rem;">
+    <!-- Background texture inherited from hero-bg class -->
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container about-hero__inner" style="text-align: center; margin-top: 5rem;">
+      <h1 id="page-title" class="about-hero__heading" style="color: var(--gold); margin-bottom: 1rem;">Activities & Events</h1>
+      <p class="about-hero__subtext" style="color: var(--taupe); font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+        Stay informed about our latest seminars, upcoming events, and ongoing activities designed to support your journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       UPDATES SECTION
+  ════════════════════════════════════════ -->
+  <section id="section-updates" aria-label="Our Recent Updates" style="padding: 2rem 0 8rem 0; background: var(--cream);">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+        
+        <!-- Activity Card 1 -->
+        <div class="update-card" style="flex: 1 1 320px; max-width: 400px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column;">
+          <img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?q=80&w=800&auto=format&fit=crop" alt="Mindfulness Seminar" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold);" >
+          <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block;">Upcoming Seminar</span>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Mindfulness & Inner Peace</h3>
+            <p style="color: var(--taupe); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              Join us for an immersive seminar focusing on techniques to cultivate mindfulness in your daily life. Discover tools to manage stress and reconnect with your inner self.
+            </p>
+            <div style="border-top: 1px solid rgba(196,169,108,0.3); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <div>
+                  <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0.3rem;"><strong>Date:</strong> October 15, 2026</p>
+                  <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0;"><strong>Location:</strong> Online / Zoom</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                    <span style="color: var(--forest); font-weight: 600; font-size: 0.95rem;">Spots left: <span id="spots-1" style="color: var(--gold); font-size: 1.1rem; display: inline-block;">15</span></span>
+                    <button class="btn btn--gold register-btn" data-id="1" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Register</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Card 2 -->
+        <div class="update-card" style="flex: 1 1 320px; max-width: 400px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column;">
+          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=800&auto=format&fit=crop" alt="Group Therapy Session" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold);" >
+          <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block;">Weekly Activity</span>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Guided Meditation Circle</h3>
+            <p style="color: var(--taupe); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              A weekly guided meditation session to help you ground your energy and align your chakras. Open to all experience levels. Come find your center.
+            </p>
+            <div style="border-top: 1px solid rgba(196,169,108,0.3); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <div>
+                  <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0.3rem;"><strong>Date:</strong> Every Wednesday Evening</p>
+                  <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0;"><strong>Location:</strong> Community Hall, Main Center</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                    <span style="color: var(--forest); font-weight: 600; font-size: 0.95rem;">Spots left: <span id="spots-2" style="color: var(--gold); font-size: 1.1rem; display: inline-block;">8</span></span>
+                    <button class="btn btn--gold register-btn" data-id="2" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Register</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Card 3 -->
+        <div class="update-card" style="flex: 1 1 320px; max-width: 400px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column;">
+          <img src="https://images.unsplash.com/photo-1473221326025-9183b464bb7e?q=80&w=800&auto=format&fit=crop" alt="Workshop on Holistic Healing" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold);" >
+          <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block;">Recent Workshop</span>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Holistic Healing Retreat</h3>
+            <p style="color: var(--taupe); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              We recently concluded a wonderful weekend retreat focusing on holistic approaches to healing trauma. Thank you to everyone who participated and made it a safe space.
+            </p>
+            <div style="border-top: 1px solid rgba(196,169,108,0.3); padding-top: 1rem;">
+                <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0;"><strong>Status:</strong> Completed successfully</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="footer-logo" aria-label="EnerSoul Healing home">
+            <img src="assets/new_logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="footer-logo__img" />
+          </a>
+          <p class="footer-tagline">A holistic emotional wellness practice where psychology and energy healing come together for deeper self-understanding and transformation.</p>
+        </div>
+
+        <div class="footer-links">
+  <h5>Navigate</h5>
+  <ul role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Manila</a></li>
+    <li><a href="index.html#section-modalities">Services</a></li>
+    <li><a href="blog.html">Insights / Blogs</a></li>
+  </ul>
+</div>
+
+        <div class="footer-links">
+          <h5>Connect</h5>
+          <ul role="list">
+            <li><a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" id="footer-book">Book a Consultation</a></li>
+            <li><a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" id="footer-email">hello@enersoulshealing.com</a></li>
+            <li><a href="#section-philosophy" id="footer-philosophy">EnerSoul Philosophy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EnerSoul Healing. All rights reserved.</p>
+        <span class="footer-lotus" aria-hidden="true">
+          <svg class="icon"><use href="#icon-lotus" /></svg>
+        </span>
+        <p style="font-family: 'Dancing Script', cursive; font-size: 1rem;" class="footer-mantra">You are healing. You are becoming.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65-157zM223.9 413.3c-33 0-65.4-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.9-28.1-99 0-96.1 78.2-174.4 174.4-174.4 51.4 0 99.8 20 136.1 56.4 36.3 36.4 56.4 84.8 56.4 136.2 0 96.2-78.2 174.4-174.4 174.4zm95.4-130.8c-5.2-2.6-30.9-15.3-35.7-17-4.8-1.7-8.3-2.6-11.8 2.6-3.5 5.2-13.5 17-16.6 20.5-3.1 3.5-6.1 4-11.3 1.3-5.2-2.6-22.1-8.2-42-26.2-15.5-14-26-31.3-29.1-36.5-3.1-5.2-.3-8 2.3-10.6 2.4-2.4 5.2-6.1 7.8-9.1 2.6-3.1 3.5-5.2 5.2-8.7 1.7-3.5.9-6.6-.4-9.2-1.3-2.6-11.8-28.5-16.1-39-4.3-10.3-8.7-8.9-11.8-9-3.1-.1-6.6-.1-10.1-.1-3.5 0-9.2 1.3-14 6.5-4.8 5.2-18.3 17.9-18.3 43.6 0 25.8 18.8 50.7 21.4 54.2 2.6 3.5 37 56.5 89.6 79.2 12.5 5.4 22.3 8.6 29.9 11 12.6 4 24.1 3.4 33.2 2.1 10.3-1.5 30.9-12.6 35.3-24.8 4.3-12.2 4.3-22.7 3-24.8-1.4-2.1-4.9-3.4-10.1-6.1z"/>
+    </svg>
+  </a>
+  <!-- Registration Modal -->
+  <div id="registration-modal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+    <div class="modal-content" style="background: var(--cream); border-radius: var(--radius-lg); padding: 3rem; width: 90%; max-width: 450px; position: relative; box-shadow: var(--shadow-card);">
+      <button id="close-modal" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; color: var(--forest); cursor: pointer;">&times;</button>
+      <h3 style="font-family: var(--font-display); color: var(--forest); margin-bottom: 1rem; font-size: 1.8rem;">Register for Event</h3>
+      <p style="color: var(--taupe); margin-bottom: 2rem; font-size: 0.95rem;">Please provide your details to secure your spot.</p>
+      
+      <form id="registration-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label for="reg-name" style="display: block; font-size: 0.85rem; color: var(--forest); margin-bottom: 0.3rem; font-weight: 500;">Full Name</label>
+          <input type="text" id="reg-name" required style="width: 100%; padding: 0.8rem 1rem; border: 1px solid rgba(196,169,108,0.4); border-radius: 8px; font-family: var(--font-body); background: var(--glass); color: var(--forest);">
+        </div>
+        <div>
+          <label for="reg-email" style="display: block; font-size: 0.85rem; color: var(--forest); margin-bottom: 0.3rem; font-weight: 500;">Email Address</label>
+          <input type="email" id="reg-email" required style="width: 100%; padding: 0.8rem 1rem; border: 1px solid rgba(196,169,108,0.4); border-radius: 8px; font-family: var(--font-body); background: var(--glass); color: var(--forest);">
+        </div>
+        <div>
+          <label for="reg-phone" style="display: block; font-size: 0.85rem; color: var(--forest); margin-bottom: 0.3rem; font-weight: 500;">Phone Number</label>
+          <input type="tel" id="reg-phone" required style="width: 100%; padding: 0.8rem 1rem; border: 1px solid rgba(196,169,108,0.4); border-radius: 8px; font-family: var(--font-body); background: var(--glass); color: var(--forest);">
+        </div>
+        <button type="submit" class="btn btn--gold" style="margin-top: 1rem; width: 100%; justify-content: center;">Confirm Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize vacancies in localStorage if not exists
+      if (!localStorage.getItem('activity-1-spots')) {
+        localStorage.setItem('activity-1-spots', '15');
+      }
+      if (!localStorage.getItem('activity-2-spots')) {
+        localStorage.setItem('activity-2-spots', '8');
+      }
+
+      const modal = document.getElementById('registration-modal');
+      const form = document.getElementById('registration-form');
+      const closeModal = document.getElementById('close-modal');
+      let currentActivityId = null;
+
+      // Update UI on load
+      const updateSpotsUI = (id) => {
+        const spotsElement = document.getElementById(`spots-${id}`);
+        const btn = document.querySelector(`.register-btn[data-id="${id}"]`);
+        if (!spotsElement || !btn) return;
+        
+        let spots = parseInt(localStorage.getItem(`activity-${id}-spots`));
+        spotsElement.textContent = spots;
+
+        // Check if user already registered
+        if (localStorage.getItem(`activity-${id}-registered`) === 'true') {
+          btn.textContent = 'Registered';
+          btn.style.backgroundColor = 'var(--sage)';
+          btn.style.color = '#fff';
+          btn.style.borderColor = 'var(--sage)';
+          btn.style.pointerEvents = 'none';
+        } else if (spots <= 0) {
+          btn.textContent = 'Class Full';
+          btn.style.backgroundColor = 'var(--taupe)';
+          btn.style.color = '#fff';
+          btn.style.borderColor = 'var(--taupe)';
+          btn.style.pointerEvents = 'none';
+        }
+      };
+
+      updateSpotsUI(1);
+      updateSpotsUI(2);
+
+      // Handle Registration Button Click (Open Modal)
+      document.querySelectorAll('.register-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          currentActivityId = this.getAttribute('data-id');
+          modal.style.display = 'flex';
+        });
+      });
+
+      // Close Modal Logic
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        form.reset();
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          form.reset();
+        }
+      });
+
+      // Handle Form Submit
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (!currentActivityId) return;
+
+        let spots = parseInt(localStorage.getItem(`activity-${currentActivityId}-spots`));
+        
+        if (spots > 0) {
+          spots--;
+          localStorage.setItem(`activity-${currentActivityId}-spots`, spots);
+          localStorage.setItem(`activity-${currentActivityId}-registered`, 'true');
+          
+          // Animation for visual feedback
+          const spotsElement = document.getElementById(`spots-${currentActivityId}`);
+          spotsElement.style.transform = 'scale(1.4)';
+          spotsElement.style.transition = 'transform 0.3s ease';
+          setTimeout(() => { spotsElement.style.transform = 'scale(1)'; }, 300);
+          
+          updateSpotsUI(currentActivityId);
+          
+          modal.style.display = 'none';
+          form.reset();
+          
+          // Show alert
+          setTimeout(() => {
+              alert('Registration Successful! You will receive an email confirmation shortly.');
+          }, 100);
+        }
+      });
+    });
+  </script>
+</body>
+
+
+</html>

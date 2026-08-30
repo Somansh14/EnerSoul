@@ -35,91 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ════════════════════════════════════════
-  // 2. PARTICLE SYSTEM
+  // 2. PARTICLE SYSTEM — REMOVED
   // ════════════════════════════════════════
-  const canvas  = document.getElementById('particles-canvas');
-  const ctx     = canvas ? canvas.getContext('2d') : null;
-
-  if (canvas && ctx) {
-    let particles = [];
-    let animId;
-
-    const resize = () => {
-      canvas.width  = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-
-    class Particle {
-      constructor() { this.reset(); }
-
-      reset() {
-        this.x     = Math.random() * canvas.width;
-        this.y     = canvas.height + 20;
-        this.size  = Math.random() * 3 + 1;
-        this.speedY = Math.random() * 0.6 + 0.2;
-        this.speedX = (Math.random() - 0.5) * 0.4;
-        this.life   = 0;
-        this.maxLife = Math.random() * 200 + 150;
-        // Alternate between gold and sage
-        this.color = Math.random() > 0.5
-          ? `rgba(196,169,108,${Math.random() * 0.5 + 0.1})`
-          : `rgba(143,175,139,${Math.random() * 0.4 + 0.1})`;
-      }
-
-      update() {
-        this.x    += this.speedX;
-        this.y    -= this.speedY;
-        this.life += 1;
-        if (this.y < -20 || this.life > this.maxLife) this.reset();
-      }
-
-      draw() {
-        const progress = this.life / this.maxLife;
-        const alpha    = progress < 0.1
-          ? progress * 10
-          : progress > 0.8
-            ? (1 - progress) * 5
-            : 1;
-
-        ctx.save();
-        ctx.globalAlpha = alpha * 0.7;
-        ctx.fillStyle   = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-    }
-
-    // Init particles
-    const initParticles = () => {
-      particles = [];
-      const count = Math.min(Math.floor(canvas.width / 18), 50);
-      for (let i = 0; i < count; i++) {
-        const p = new Particle();
-        p.y     = Math.random() * canvas.height; // scatter initially
-        p.life  = Math.random() * p.maxLife;
-        particles.push(p);
-      }
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      animId = requestAnimationFrame(animate);
-    };
-
-    resize();
-    initParticles();
-    animate();
-
-    window.addEventListener('resize', () => {
-      cancelAnimationFrame(animId);
-      resize();
-      initParticles();
-      animate();
-    }, { passive: true });
-  }
+  // Particles removed per user request (distracting animations)
 
   // ════════════════════════════════════════
   // 3. SCROLL REVEAL — Intersection Observer
@@ -143,18 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   staggerEls.forEach(el => revealObserver.observe(el));
 
   // ════════════════════════════════════════
-  // 4. PARALLAX — Hero background
+  // 4. PARALLAX — REMOVED (distracting)
   // ════════════════════════════════════════
-  const heroBg = document.querySelector('.hero-bg');
-
-  if (heroBg) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY < window.innerHeight * 1.5) {
-        const offset = window.scrollY * 0.35;
-        heroBg.style.transform = `translateY(${offset}px)`;
-      }
-    }, { passive: true });
-  }
 
   // ════════════════════════════════════════
   // 5. SMOOTH SCROLL
@@ -287,31 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 11. CURSOR GLOW (desktop)
+  // 11. CURSOR GLOW — REMOVED
   // ════════════════════════════════════════
-  if (window.matchMedia('(pointer: fine)').matches) {
-    const glow = document.createElement('div');
-    glow.id = 'cursor-glow';
-    Object.assign(glow.style, {
-      position: 'fixed',
-      width: '300px',
-      height: '300px',
-      borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(196,169,108,0.06) 0%, transparent 70%)',
-      pointerEvents: 'none',
-      zIndex: '9999',
-      transform: 'translate(-50%, -50%)',
-      transition: 'left 0.12s ease, top 0.12s ease',
-      top: '-200px',
-      left: '-200px',
-    });
-    document.body.appendChild(glow);
-
-    document.addEventListener('mousemove', e => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top  = e.clientY + 'px';
-    }, { passive: true });
-  }
+  // Cursor glow effect removed per user request
 
   // ════════════════════════════════════════
   // 12. MODALITY CARDS — stagger
@@ -336,5 +222,97 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, box-shadow 0.4s ease, border-color 0.4s ease';
     modalityObserver.observe(card);
   });
+
+  // ════════════════════════════════════════
+  // 13. CHROMA KEY — Hero logo animation (green-screen removal)
+  //     Reads each frame of the hidden source video, removes green pixels,
+  //     and draws the result to a visible canvas for a seamless blend.
+  // ════════════════════════════════════════
+  (function initChromaKey() {
+    const video  = document.getElementById('hero-logo-src');
+    const canvas = document.getElementById('hero-logo-canvas');
+    if (!video || !canvas) return;
+
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+
+    // ── Chroma-key algorithm ───────────────────────────────────────────
+    //
+    // OLD approach (BROKEN for pale green):
+    //   Required R < 120 AND B < 120 — fails because pale/light green
+    //   has R ≈ 180–200, B ≈ 180–200, G ≈ 210–230.
+    //
+    // NEW approach — RELATIVE GREEN DOMINANCE:
+    //   gDom  = how much greener G is compared to the max of R and B.
+    //   gFrac = green's share of total brightness.
+    //   Works for BOTH bright green (0,255,0) and pale mint (190,220,190).
+    //
+    // Tune if needed:
+    //   domThreshold  — lower = more aggressive (catches paler greens)
+    //   fracThreshold — lower = more aggressive (catches more grey-green)
+    //   falloff       — range over which edges softly fade (larger = softer)
+    const domThreshold  = 8;    // G must lead max(R,B) by at least this
+    const fracThreshold = 0.34; // G must be at least this % of R+G+B
+    const falloff       = 55;   // softness of key edges
+
+    function resizeCanvas() {
+      if (video.videoWidth && video.videoHeight) {
+        canvas.width  = video.videoWidth;
+        canvas.height = video.videoHeight;
+      }
+    }
+
+    function processFrame() {
+      if (video.paused || video.ended) {
+        requestAnimationFrame(processFrame);
+        return;
+      }
+
+      // Ensure canvas matches the video's native resolution
+      if (canvas.width !== video.videoWidth || canvas.height !== video.videoHeight) {
+        resizeCanvas();
+      }
+
+      // Draw current video frame
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Read pixel data
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data; // [r,g,b,a, r,g,b,a, …]
+
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+
+        // How much greener is G than the brighter of R/B?
+        const gDom = g - Math.max(r, b);
+        // What fraction of brightness comes from G?
+        const gFrac = g / (r + g + b + 1);
+
+        if (gDom > domThreshold && gFrac > fracThreshold) {
+          // Graduated removal — stronger green dominance → more transparent
+          // This naturally soft-keys edges (logo outline stays intact)
+          const keyAmount = Math.min((gDom - domThreshold) / falloff, 1.0);
+          data[i + 3] = Math.round(data[i + 3] * (1 - keyAmount));
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+      requestAnimationFrame(processFrame);
+    }
+
+    // Start keying as soon as the video has loaded enough metadata
+    video.addEventListener('loadedmetadata', () => {
+      resizeCanvas();
+      video.play().catch(() => {}); // ensure autoplay
+      requestAnimationFrame(processFrame);
+    });
+
+    // Fallback: start if video is already loaded
+    if (video.readyState >= 2) {
+      resizeCanvas();
+      requestAnimationFrame(processFrame);
+    }
+  })();
 
 });

@@ -1,5 +1,6 @@
 /* ====================================================
    ENERSOUL HEALING — Animations Stylesheet
+   Clean, minimal — no looping or moving animations
    ==================================================== */
 
 /* ── Keyframes ── */
@@ -23,57 +24,14 @@
   to   { opacity: 1; }
 }
 
-@keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.92); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-@keyframes bounceScroll {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(10px); }
-}
-
-@keyframes floatParticle {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.8; }
-  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes pulseGold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(196,169,108,0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(196,169,108,0); }
-}
-
-@keyframes rotateLeaf {
-  0%, 100% { transform: rotate(-3deg); }
-  50%       { transform: rotate(3deg); }
-}
-
-@keyframes breathe {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.03); }
-}
-
-@keyframes lineGrow {
-  from { transform: scaleY(0); transform-origin: top; }
-  to   { transform: scaleY(1); transform-origin: top; }
-}
-
 @keyframes navbarFade {
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes lineGrow {
+  from { transform: scaleY(0); transform-origin: top; }
+  to   { transform: scaleY(1); transform-origin: top; }
 }
 
 /* ── Scroll Reveal Setup ── */
@@ -121,12 +79,16 @@
   transform: translateY(0);
 }
 
-/* ── Hero Animations ── */
+/* ── Hero Animations — one-time entrance only ── */
 .hero-eyebrow  { animation: fadeInLeft 0.8s ease 0.2s both; }
 .hero-heading  { animation: fadeInUp 1s ease 0.4s both; }
 .hero-subheading { animation: fadeInUp 1s ease 0.65s both; }
 .hero-actions  { animation: fadeInUp 1s ease 0.85s both; }
-.hero-scroll   { animation: bounceScroll 2s ease-in-out 1.5s infinite; }
+
+/* ── Hero scroll indicator — static, no bounce ── */
+.hero-scroll {
+  animation: none;
+}
 
 /* ── Navbar ── */
 #navbar { animation: navbarFade 0.7s ease 0.1s both; }
@@ -136,56 +98,15 @@
   animation: lineGrow 1.5s ease 0.5s both;
 }
 
-/* ── Gold Pulse on CTA Buttons ── */
-.btn--gold {
-  animation: pulseGold 2.5s ease-in-out infinite;
-}
-
-.btn--gold:hover { animation: none; }
-
-/* ── Section Labels — subtle letter-spacing pulse ── */
-.section-label {
-  display: inline-block;
-  color: var(--sage-deep);
-  letter-spacing: 0.25em;
-}
-
-/* ── Floating leaf decorations ── */
-.leaf-float {
-  animation: rotateLeaf 5s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-/* ── Breathe effect on about image ── */
-.about-image-frame {
-  animation: breathe 6s ease-in-out infinite;
-}
-
-/* ── Node pulse ── */
-.timeline-node {
-  animation: pulseGold 3s ease-in-out infinite;
-}
-
-/* ── Gradient hero heading shimmer ── */
+/* ── Hero heading — static color, no shimmer ── */
 .hero-heading em {
-  background: linear-gradient(
-    90deg,
-    var(--sage-deep) 0%,
-    var(--sage) 40%,
-    var(--gold) 60%,
-    var(--sage-deep) 100%
-  );
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 5s linear infinite;
+  color: var(--sage-deep);
+  font-style: italic;
 }
 
-/* ── Animated gradient CTA section ── */
+/* ── CTA section — static background, no gradient shift ── */
 #section-cta {
-  background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+  background-size: 100% 100%;
 }
 
 /* ── Hover micro-interactions ── */
@@ -230,7 +151,7 @@ body {
 .mobile-menu.open a:nth-child(3) { animation-delay: 0.26s; }
 .mobile-menu.open a:nth-child(4) { animation-delay: 0.34s; }
 
-/* ── Outcome number count-up animation ── */
+/* ── Outcome number hover scale ── */
 .outcome-number {
   transition: transform 0.3s ease, color 0.3s ease;
 }

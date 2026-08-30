@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Manila — Founder of EnerSoul Healing. Counselling Psychologist, Reiki Grand Master and Holistic Healing Practitioner. Read her story of transformation." />
+  <meta name="keywords"
+    content="Manila EnerSoul, about Manila, counselling psychologist, reiki grand master, holistic healing, EnerSoul Healing story" />
+  <meta property="og:title" content="About Manila — EnerSoul Healing" />
+  <meta property="og:description"
+    content="The story behind EnerSoul Healing — where psychology and holistic healing come together for deeper transformation." />
+  <title>About Manila — EnerSoul Healing</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A96C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z'/></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <style>
+    /* ── SVG Icon System ── */
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .reason-icon .icon { width: 28px; height: 28px; }
+    .reason-icon { color: var(--sage-deep); }
+    .timeline-node .icon { width: 22px; height: 22px; color: var(--gold); }
+    .modality-icon .icon { width: 36px; height: 36px; color: var(--sage-deep); }
+    .pillar__icon { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; }
+    .gold-divider__lotus .icon { width: 22px; height: 22px; color: var(--gold); opacity: 0.9; }
+    .cta-check-icon .icon { width: 18px; height: 18px; color: var(--gold-light); }
+    .footer-lotus .icon { width: 28px; height: 28px; color: rgba(196, 169, 108, 0.9); }
+    .btn-arrow .icon { width: 16px; height: 16px; transition: transform 0.3s ease; }
+    .btn:hover .btn-arrow .icon { transform: translateX(5px); }
+
+    /* ── About Page Specific ── */
+
+    /* Hero — full-screen, clears fixed nav */
+    .about-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      /* Clear the fixed navbar (logo 100px + padding ~28px = ~130px) */
+      padding-top: 140px;
+      padding-bottom: 5rem;
+      overflow: hidden;
+    }
+
+    .about-hero__inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .about-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-hero__text {
+      animation: fadeInLeft 0.9s ease both;
+    }
+
+    .about-hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-hero__eyebrow-line {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .about-hero__heading {
+      font-size: clamp(2.6rem, 5vw, 4.6rem);
+      line-height: 1.1;
+      margin-bottom: 1.6rem;
+      color: var(--forest);
+    }
+
+    .about-hero__heading em {
+      font-style: italic;
+      color: var(--sage-deep);
+    }
+
+    .about-hero__subtext {
+      font-size: 1.05rem;
+      color: var(--taupe);
+      line-height: 1.8;
+      max-width: 460px;
+      margin-bottom: 2rem;
+    }
+
+    .about-hero__image-col {
+      position: relative;
+      animation: fadeInRight 0.9s ease 0.2s both;
+      /* Prevent the image column from overflowing upward */
+      padding-top: 1rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .about-hero__frame {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      /* Cap height so it doesn't punch through the navbar */
+      max-height: 540px;
+      background: var(--cream-dark);
+    }
+
+    .about-hero__frame img {
+      width: 100%;
+      height: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-hero__frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(45,74,45,0.16) 100%);
+      z-index: 1;
+      border-radius: 24px;
+    }
+
+    .about-hero__frame-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 32px;
+      border: 1px solid rgba(196,169,108,0.28);
+      pointer-events: none;
+      /* Keep ring inside the image col bounds */
+      top: -12px;
+      bottom: 14px;
+    }
+
+    .about-hero__badge {
+      position: absolute;
+      bottom: 0;
+      left: -16px;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.4rem;
+      box-shadow: var(--shadow-gold);
+      z-index: 3;
+    }
+
+    .about-hero__badge-name {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--forest);
+      font-weight: 600;
+    }
+
+    .about-hero__badge-roles {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--taupe);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    /* Story Section — alternating narrative blocks */
+    .story-section {
+      padding: 9rem 0;
+      position: relative;
+      background: var(--cream);
+    }
+
+    .story-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 6rem;
+    }
+
+    .story-intro h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .story-intro p {
+      color: var(--taupe);
+      font-size: 1.05rem;
+    }
+
+    /* Narrative blocks */
+    .narrative-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .narrative-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 5rem 0;
+      border-top: 1px solid rgba(196,169,108,0.18);
+    }
+
+    .narrative-block:last-child {
+      border-bottom: 1px solid rgba(196,169,108,0.18);
+    }
+
+    .narrative-block--reverse .narrative-block__text {
+      order: 2;
+    }
+
+    .narrative-block--reverse .narrative-block__visual {
+      order: 1;
+    }
+
+    .narrative-block__label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: var(--font-body);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .narrative-block__text h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      color: var(--forest);
+      margin-bottom: 1.2rem;
+      line-height: 1.25;
+    }
+
+    .narrative-block__text h3 em {
+      font-style: italic;
+      color: var(--sage-deep);
+    }
+
+    .narrative-block__text p {
+      color: var(--taupe);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .narrative-block__text p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .narrative-block__visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Pullquote card for visual column */
+    .pullquote-card {
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pullquote-card::before {
+      content: '\201C';
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 8rem;
+      color: var(--gold);
+      opacity: 0.12;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .pullquote-card p {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      font-style: italic;
+      color: var(--forest);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .pullquote-card__attr {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: var(--font-body);
+    }
+
+    /* Credential pills */
+    .credential-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .credential-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(143,175,139,0.14), rgba(196,169,108,0.1));
+      border: 1px solid rgba(196,169,108,0.3);
+      border-radius: 100px;
+      padding: 0.45rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .credential-chip svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Visual accent box */
+    .accent-box {
+      background: linear-gradient(135deg, rgba(143,175,139,0.12), rgba(196,169,108,0.08));
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      border: 1px solid rgba(196,169,108,0.22);
+      position: relative;
+    }
+
+    .accent-box__number {
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      color: var(--gold);
+      opacity: 0.18;
+      line-height: 1;
+      position: absolute;
+      top: 1.2rem;
+      right: 1.8rem;
+      pointer-events: none;
+    }
+
+    .accent-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--forest);
+      margin-bottom: 0.8rem;
+    }
+
+    .accent-box p {
+      color: var(--taupe);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Closing statement band */
+    .about-closing {
+      margin-top: 4rem;
+      padding: 3rem 4rem;
+      background: linear-gradient(135deg, rgba(45,74,45,0.06), rgba(196,169,108,0.08));
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--gold);
+      text-align: center;
+    }
+
+    .about-closing p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+      color: var(--forest);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Philosophy Section ── */
+    .philosophy-intro-text {
+      max-width: 640px;
+      margin: 0 auto 1rem;
+      text-align: center;
+      color: var(--taupe);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* What EnerSoul Stands For — name breakdown */
+    .ener-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .ener-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ener-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sage), var(--gold));
+      opacity: 0.6;
+    }
+
+    .ener-card__word {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--forest);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .ener-card__word em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .ener-card__def {
+      font-size: 0.98rem;
+      color: var(--taupe);
+      line-height: 1.7;
+    }
+
+    /* Pillars — styled like the home modality grid */
+    .pillars-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .pillars-heading h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--forest);
+    }
+
+    .pillars-grid-new {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 900px) {
+      .pillars-grid-new { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .pillars-grid-new { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .pillar-card-new {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card-new:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .pillar-card-new__icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      background: linear-gradient(135deg, rgba(143,175,139,0.18), rgba(196,169,108,0.14));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sage-deep);
+    }
+
+    .pillar-card-new__icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .pillar-card-new__label {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--forest);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-card-new__desc {
+      font-size: 0.82rem;
+      color: var(--taupe);
+      line-height: 1.6;
+    }
+
+    /* Aim + Vision two-column */
+    .aim-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .aim-vision-card {
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aim-vision-card--aim {
+      background: linear-gradient(135deg, rgba(45,74,45,0.07), rgba(143,175,139,0.1));
+      border: 1px solid rgba(143,175,139,0.3);
+    }
+
+    .aim-vision-card--vision {
+      background: linear-gradient(135deg, rgba(196,169,108,0.1), rgba(196,169,108,0.05));
+      border: 1px solid rgba(196,169,108,0.3);
+    }
+
+    .aim-vision-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    .aim-vision-card p {
+      color: var(--taupe);
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    /* Closing mantra */
+    .closing-mantra {
+      text-align: center;
+      padding: 5rem 0 2rem;
+    }
+
+    .closing-mantra p {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--forest);
+      line-height: 1.5;
+    }
+
+    .closing-mantra span {
+      color: var(--sage-deep);
+      font-style: italic;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .about-hero {
+        padding-top: 120px;
+        padding-bottom: 4rem;
+        min-height: auto;
+      }
+      .about-hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-hero__image-col { order: -1; max-width: 380px; margin: 0 auto; padding-bottom: 2rem; }
+      .about-hero__frame { max-height: 420px; }
+      .about-hero__frame img { max-height: 420px; }
+      .about-hero__heading { font-size: clamp(2.2rem, 7vw, 3rem); }
+      .about-hero__subtext { max-width: 100%; }
+      .narrative-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .narrative-block--reverse .narrative-block__text { order: 0; }
+      .narrative-block--reverse .narrative-block__visual { order: 0; }
+      .ener-breakdown { grid-template-columns: 1fr; }
+      .aim-vision-grid { grid-template-columns: 1fr; }
+      .about-closing { padding: 2.5rem; }
+      .about-hero__badge { left: 0; bottom: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .pullquote-card { padding: 2rem; }
+      .narrative-block { padding: 3rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SVG ICON SPRITE (hidden) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="icon-lotus" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z" />
+      </symbol>
+      <symbol id="icon-mind" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="icon-emotion" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" /><path d="M12 2a10 10 0 0 1 0 20" /><path d="M12 2a10 10 0 0 0 0 20" />
+      </symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+        <path d="M5 3v4" /><path d="M19 17v4" /><path d="M3 5h4" /><path d="M17 19h4" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </symbol>
+      <symbol id="icon-infinity" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" />
+        <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" /><polyline points="9 12 11 14 15 10" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+      <symbol id="icon-healing" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" /><path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a href="index.html#hero" class="nav-logo" aria-label="EnerSoul Healing home">
+        <img src="assets/new_logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="nav-logo__img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html" style="color:var(--sage-deep)">About</a></li>
+  <li><a href="index.html#section-modalities">Services</a></li>
+  <li><a href="blog.html">Insights</a></li>
+</ul>
+
+      <div class="nav-cta">
+        <a href="updates.html" class="btn btn--gold" style="margin-right: 1rem;">Activities</a>
+        <a href="#section-cta" class="btn btn--outline" id="nav-book-btn">Request a Call</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="index.html#section-modalities">Services</a>
+  <a href="blog.html">Insights</a>
+  <a href="about.html#section-philosophy">Philosophy</a>
+  <a href="updates.html" class="btn btn--gold" style="margin-top:1rem;">Activities</a>
+    <a href="#section-cta" class="btn btn--primary" style="margin-top:1rem;">Request a Call</a>
+</div>
+
+  <!-- ════════════════════════════════════════
+       ABOUT HERO — SECTION 1
+  ════════════════════════════════════════ -->
+  <section id="hero" aria-label="About Manila" class="about-hero">
+
+    <!-- Background texture inherited from hero-bg class -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Geometric corner accents (same as homepage hero) -->
+    <svg class="geo-accent geo-accent--tl" width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <circle cx="20" cy="20" r="2" fill="#C4A96C" opacity="0.72"/>
+      <circle cx="60" cy="12" r="1.5" fill="#8FAF8B" opacity="0.9"/>
+      <circle cx="12" cy="65" r="1.5" fill="#8FAF8B" opacity="0.72"/>
+      <circle cx="95" cy="28" r="1" fill="#C4A96C" opacity="0.63"/>
+      <line x1="30" y1="70" x2="100" y2="10" stroke="#C4A96C" stroke-width="0.6" opacity="0.4"/>
+      <line x1="10" y1="90" x2="70" y2="10" stroke="#8FAF8B" stroke-width="0.6" opacity="0.4"/>
+      <path d="M45 45 L52 38 L59 45 L52 52Z" stroke="#C4A96C" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="50" cy="100" r="60" stroke="#C4A96C" stroke-width="0.5" opacity="0.1"/>
+    </svg>
+
+    <svg class="geo-accent geo-accent--br" width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <circle cx="170" cy="170" r="2" fill="#C4A96C" opacity="0.72"/>
+      <circle cx="135" cy="178" r="1.5" fill="#8FAF8B" opacity="0.9"/>
+      <circle cx="178" cy="130" r="1.5" fill="#8FAF8B" opacity="0.72"/>
+      <line x1="150" y1="120" x2="80" y2="185" stroke="#C4A96C" stroke-width="0.6" opacity="0.4"/>
+      <path d="M140 140 L147 133 L154 140 L147 147Z" stroke="#C4A96C" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="150" cy="150" r="60" stroke="#8FAF8B" stroke-width="0.5" opacity="0.1"/>
+    </svg>
+
+    <!-- Sacred geometry right side accent -->
+    <svg class="section-decor section-decor--cr" width="180" height="360" viewBox="0 0 180 360" fill="none" aria-hidden="true" style="top: 50%; transform: translateY(-50%); right: 0;">
+      <circle cx="160" cy="180" r="120" stroke="#C4A96C" stroke-width="0.5" opacity="0.15"/>
+      <circle cx="160" cy="180" r="80" stroke="#8FAF8B" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.18"/>
+      <circle cx="160" cy="180" r="45" stroke="#C4A96C" stroke-width="0.6" opacity="0.16"/>
+    </svg>
+
+    <div class="container about-hero__inner">
+      <div class="about-hero__grid">
+
+        <!-- Left: text -->
+        <div class="about-hero__text">
+          <div class="about-hero__eyebrow">
+            <div class="about-hero__eyebrow-line"></div>
+            <span class="section-label">EnerSoul Healing</span>
+          </div>
+
+          <h1 class="about-hero__heading">
+            Hi, I'm <em>Manila.</em>
+          </h1>
+
+          <p class="about-hero__subtext">
+            I'm the founder of <strong>EnerSoul Healing</strong>, where psychology and holistic healing come together to support deeper self-understanding and transformation.
+          </p>
+
+          <div class="credential-chips">
+            <span class="credential-chip">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Counselling Psychologist
+            </span>
+            <span class="credential-chip">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Reiki Grand Master
+            </span>
+            <span class="credential-chip">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Holistic Healing Practitioner
+            </span>
+          </div>
+
+          <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#story-section" class="btn btn--primary" id="about-read-story">
+              Read My Story
+              <span class="btn-arrow"><svg class="icon"><use href="#icon-arrow" /></svg></span>
+            </a>
+            <a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="btn btn--outline" id="about-book-btn">Book a Call</a>
+          </div>
+        </div>
+
+        <!-- Right: image -->
+        <div class="about-hero__image-col">
+          <div class="about-hero__frame">
+            <img src="images/manila.jpg" alt="Manila — Founder of EnerSoul Healing" loading="eager" />
+          </div>
+          <div class="about-hero__frame-ring" aria-hidden="true"></div>
+          <div class="about-hero__badge">
+            <span class="about-hero__badge-name">Manila</span>
+            <span class="about-hero__badge-roles">Founder · EnerSoul Healing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       MY STORY — SECTION 2
+  ════════════════════════════════════════ -->
+  <section id="story-section" class="story-section" aria-label="Manila's story">
+
+    <!-- Sacred geometry: concentric rings top-right -->
+    <svg class="section-decor section-decor--tr" width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+      <circle cx="240" cy="40" r="100" stroke="#C4A96C" stroke-width="0.6" opacity="0.22"/>
+      <circle cx="240" cy="40" r="68" stroke="#8FAF8B" stroke-width="0.6" stroke-dasharray="4 9" opacity="0.22"/>
+      <circle cx="240" cy="40" r="38" stroke="#C4A96C" stroke-width="0.8" opacity="0.2"/>
+      <path d="M238 38 L242 34 L246 38 L242 42Z" stroke="#C4A96C" stroke-width="0.8" fill="none" opacity="0.6"/>
+      <line x1="240" y1="40" x2="150" y2="140" stroke="#C4A96C" stroke-width="0.5" opacity="0.18"/>
+      <line x1="240" y1="40" x2="170" y2="160" stroke="#8FAF8B" stroke-width="0.5" opacity="0.16"/>
+    </svg>
+
+    <!-- Arc path bottom-left -->
+    <svg class="section-decor section-decor--bl" width="200" height="220" viewBox="0 0 200 220" fill="none" aria-hidden="true">
+      <path d="M0,180 Q80,130 40,90 Q0,50 90,10" stroke="#8FAF8B" stroke-width="0.8" fill="none" opacity="0.25"/>
+      <circle cx="40" cy="90" r="2" fill="#C4A96C" opacity="0.4"/>
+      <circle cx="20" cy="180" r="2.5" fill="#8FAF8B" opacity="0.36"/>
+      <path d="M38 88 L43 83 L48 88 L43 93Z" stroke="#C4A96C" stroke-width="0.7" fill="none" opacity="0.55"/>
+    </svg>
+
+    <div class="container">
+
+      <!-- Section intro header -->
+      <div class="story-intro reveal">
+        <span class="section-label">My Story</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon"><use href="#icon-lotus" /></svg></span>
+        </div>
+        <h2>A path that chose <em>me.</em></h2>
+        <p>Before EnerSoul Healing, there was a woman searching—for answers, for purpose, for a life that felt truly her own.</p>
+      </div>
+
+      <!-- Narrative blocks -->
+      <div class="narrative-blocks">
+
+        <!-- Block 1: The Corporate Years -->
+        <div class="narrative-block reveal reveal--left" id="story-block-1">
+          <div class="narrative-block__text">
+            <span class="narrative-block__label">The Beginning</span>
+            <h3>Eight years building <em>a familiar path.</em></h3>
+            <p>For almost eight years, I built my career in the corporate world — learning about people, behaviour, communication and the many ways we navigate life.</p>
+            <p>From the outside, I was building a familiar and successful path. I had the career, the trajectory, the milestones that were supposed to mean something.</p>
+            <p>But somewhere along the way, I began to realise that there was another path calling me — one that felt more deeply connected to who I truly was.</p>
+          </div>
+          <div class="narrative-block__visual">
+            <div class="accent-box">
+              <span class="accent-box__number" aria-hidden="true">8</span>
+              <h4>Years in the corporate world</h4>
+              <p>Learning deeply about people, behaviour and the many ways we navigate life — before finding a different calling.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: The Turning Point -->
+        <div class="narrative-block narrative-block--reverse reveal reveal--right" id="story-block-2">
+          <div class="narrative-block__text">
+            <span class="narrative-block__label">The Turning Point</span>
+            <h3>When the path <em>turned inward.</em></h3>
+            <p>My own experiences with emotional pain, disconnection and healing became a turning point. They led me inward — to understand myself, to explore the deeper layers of healing.</p>
+            <p>And eventually to recognise what I truly wanted to dedicate my life to.</p>
+            <p>That turning point wasn't comfortable. But it was honest. And it was mine.</p>
+          </div>
+          <div class="narrative-block__visual">
+            <div class="pullquote-card">
+              <p>"I chose to leave behind the path I had known and follow a purpose that felt greater than a career."</p>
+              <span class="pullquote-card__attr">— Manila</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3: The Foundation -->
+        <div class="narrative-block reveal reveal--left" id="story-block-3">
+          <div class="narrative-block__text">
+            <span class="narrative-block__label">The Foundation</span>
+            <h3>Where two worlds <em>became one.</em></h3>
+            <p>My background in psychology gave me a deep understanding of the mind, human behaviour and emotional patterns. My own healing journey opened me to the deeper dimensions of inner work — exploring the relationship between the <strong>mind, body, energy and inner self</strong>.</p>
+            <p>Today, I bring these worlds together. Through psychological understanding and holistic practices including <strong>Reiki, meditation, hypnotherapy, tarot and crystal therapy</strong>, I create a space where healing can be explored in a way that is compassionate, intuitive and deeply personal.</p>
+          </div>
+          <div class="narrative-block__visual">
+            <div class="accent-box" style="background: linear-gradient(135deg, rgba(196,169,108,0.1), rgba(45,74,45,0.07)); border-color: rgba(196,169,108,0.28);">
+              <span class="accent-box__number" aria-hidden="true">∞</span>
+              <h4>Where healing meets science</h4>
+              <p>The bridge between evidence-based psychology and holistic energy work — held together by lived experience and compassionate practice.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4: The Space -->
+        <div class="narrative-block narrative-block--reverse reveal reveal--right" id="story-block-4">
+          <div class="narrative-block__text">
+            <span class="narrative-block__label">What I Understand</span>
+            <h3>Choosing yourself <em>takes courage.</em></h3>
+            <p>I understand what it feels like to know that something within you needs to change, yet not fully understand what it is. I understand what it means to lose connection with yourself, to search for answers, and to slowly find your way back.</p>
+            <p>And perhaps most importantly — I understand that choosing yourself and choosing a different life takes <em>courage.</em></p>
+            <p>That is the space I bring into my work. A space where you can slow down, explore what lies beneath your experiences, and reconnect with the part of you that may have been waiting to be heard.</p>
+          </div>
+          <div class="narrative-block__visual">
+            <div class="pullquote-card" style="background: linear-gradient(135deg, rgba(45,74,45,0.05), rgba(143,175,139,0.1));">
+              <p>"I believe every person carries the capacity for healing and transformation. Sometimes, what we need is the right space, the right support, and someone who can truly understand the journey."</p>
+              <span class="pullquote-card__attr">— Manila</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Closing statement -->
+      <div class="about-closing reveal">
+        <p>
+          <strong>EnerSoul Healing was born from my decision to follow that journey myself.</strong><br/>
+          Today, I dedicate my life to helping others find their way towards <em>greater understanding, inner connection and meaningful change.</em><br/><br/>
+          If something within you is asking to be understood — I'd be honoured to walk alongside you.
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="btn btn--gold btn--lg" id="story-cta">
+          Begin Your Journey
+          <span class="btn-arrow"><svg class="icon"><use href="#icon-arrow" /></svg></span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WHAT IS ENERSOUL HEALING — SECTION 3
+  ════════════════════════════════════════ -->
+  <section id="section-philosophy" aria-label="What is EnerSoul Healing">
+
+    <!-- Full sacred geometry ring cluster top-right -->
+    <svg class="section-decor section-decor--tr" width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true">
+      <circle cx="260" cy="20" r="110" stroke="#C4A96C" stroke-width="0.6" opacity="0.22"/>
+      <circle cx="260" cy="20" r="78" stroke="#8FAF8B" stroke-width="0.6" stroke-dasharray="4 9" opacity="0.22"/>
+      <circle cx="260" cy="20" r="48" stroke="#C4A96C" stroke-width="0.8" opacity="0.2"/>
+      <circle cx="260" cy="20" r="20" stroke="#8FAF8B" stroke-width="0.8" opacity="0.23"/>
+      <circle cx="260" cy="20" r="4" fill="#C4A96C" opacity="0.36"/>
+      <line x1="260" y1="20" x2="130" y2="150" stroke="#C4A96C" stroke-width="0.5" opacity="0.2"/>
+      <line x1="260" y1="20" x2="100" y2="100" stroke="#C4A96C" stroke-width="0.4" opacity="0.16"/>
+    </svg>
+
+    <!-- Arc + dots bottom-left -->
+    <svg class="section-decor section-decor--bl" width="220" height="220" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+      <path d="M0,180 Q80,140 40,100 Q0,60 90,20" stroke="#8FAF8B" stroke-width="0.8" fill="none" opacity="0.25"/>
+      <circle cx="40" cy="100" r="2" fill="#C4A96C" opacity="0.45"/>
+      <circle cx="20" cy="180" r="2.5" fill="#8FAF8B" opacity="0.4"/>
+      <path d="M38 98 L43 93 L48 98 L43 103Z" stroke="#C4A96C" stroke-width="0.7" fill="none" opacity="0.58"/>
+    </svg>
+
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">What Is EnerSoul Healing?</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon"><use href="#icon-lotus" /></svg></span>
+        </div>
+        <h2>Where Energy<br /><em>Meets Psychology.</em></h2>
+      </div>
+
+      <p class="philosophy-intro-text reveal">
+        EnerSoul Healing is an approach to inner work that brings together <strong>psychology, energy work and spiritual growth</strong> to explore the different layers of our experience. It recognises that transformation isn't always limited to what we consciously think or understand.
+      </p>
+
+      <!-- ENER + SOUL name breakdown -->
+      <div class="ener-breakdown reveal">
+        <div class="ener-card">
+          <div class="ener-card__word"><em>ENER</em></div>
+          <p class="ener-card__def">The energy within and around us — the invisible force that shapes how we feel, connect and move through life.</p>
+        </div>
+        <div class="ener-card">
+          <div class="ener-card__word"><em>SOUL</em></div>
+          <p class="ener-card__def">The deeper dimension of who we are — beyond the mind and body, the seat of meaning, purpose and inner truth.</p>
+        </div>
+      </div>
+
+      <!-- Pillars -->
+      <div class="pillars-heading reveal">
+        <span class="section-label">The EnerSoul Philosophy</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon"><use href="#icon-lotus" /></svg></span>
+        </div>
+        <h3>Five dimensions of <em>inner work.</em></h3>
+      </div>
+
+      <div class="pillars-grid-new stagger-children">
+        <div class="pillar-card-new" id="pillar-mind">
+          <div class="pillar-card-new__icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span class="pillar-card-new__label">Mind</span>
+          <p class="pillar-card-new__desc">Understand and reshape thought patterns.</p>
+        </div>
+
+        <div class="pillar-card-new" id="pillar-emotion">
+          <div class="pillar-card-new__icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2a10 10 0 0 0 0 20"/></svg>
+          </div>
+          <span class="pillar-card-new__label">Emotion</span>
+          <p class="pillar-card-new__desc">Process what has been carried within.</p>
+        </div>
+
+        <div class="pillar-card-new" id="pillar-energy">
+          <div class="pillar-card-new__icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          </div>
+          <span class="pillar-card-new__label">Energy</span>
+          <p class="pillar-card-new__desc">Release, restore and realign.</p>
+        </div>
+
+        <div class="pillar-card-new" id="pillar-subconscious">
+          <div class="pillar-card-new__icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </div>
+          <span class="pillar-card-new__label">Subconscious</span>
+          <p class="pillar-card-new__desc">Explore deeper patterns and conditioning.</p>
+        </div>
+
+        <div class="pillar-card-new" id="pillar-soul">
+          <div class="pillar-card-new__icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z"/><path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z"/></svg>
+          </div>
+          <span class="pillar-card-new__label">Soul</span>
+          <p class="pillar-card-new__desc">Reconnect with meaning, purpose and inner truth.</p>
+        </div>
+      </div>
+
+      <!-- Aim & Vision -->
+      <div class="aim-vision-grid reveal">
+        <div class="aim-vision-card aim-vision-card--aim">
+          <h4>The Aim</h4>
+          <p>Not simply to help you feel better for a moment. But to support a deeper shift in the way you <strong>think, feel, respond, relate and live.</strong></p>
+        </div>
+        <div class="aim-vision-card aim-vision-card--vision">
+          <h4>The Vision</h4>
+          <p><em>Inner healing that creates outer transformation.</em><br /><br />A life lived with greater <strong>awareness, alignment, meaning and connection.</strong></p>
+        </div>
+      </div>
+
+      <!-- Closing mantra -->
+      <div class="closing-mantra reveal">
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon"><use href="#icon-lotus" /></svg></span>
+        </div>
+        <p>
+          <span>You are healing.</span><br />
+          You are becoming.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FIRST STEP / CTA — SECTION 4
+  ════════════════════════════════════════ -->
+  <section id="section-cta" aria-label="Book your consultation">
+
+    <div class="container">
+      <div class="cta-content">
+
+        <span class="section-label" style="color: rgba(241,234,216,0.95);">Your First Step</span>
+        <div class="gold-divider" aria-hidden="true">
+          <span class="gold-divider__lotus"><svg class="icon" style="color:var(--sage-sand);"><use href="#icon-lotus" /></svg></span>
+        </div>
+
+        <h2>Every journey begins<br />with a conversation.</h2>
+
+        <p class="cta-lead">
+          Choosing the right support is an important decision, and it should never feel rushed.
+          That's why we begin with a <strong style="color: var(--sage-sand);">complimentary 30-minute consultation.</strong>
+        </p>
+
+        <div class="cta-checklist" role="list">
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check" /></svg></span>
+            <span>Understand what brings you here.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check" /></svg></span>
+            <span>Explore the challenges you're currently facing.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check" /></svg></span>
+            <span>Discuss your goals and what you're hoping to work towards.</span>
+          </div>
+          <div class="cta-check-item" role="listitem">
+            <span class="cta-check-icon" aria-hidden="true"><svg class="icon"><use href="#icon-check" /></svg></span>
+            <span>Decide together whether we're the right fit.</span>
+          </div>
+        </div>
+
+        <div class="cta-actions">
+          <a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="btn btn--gold btn--lg" id="cta-book-btn">
+            Book Your Free 30-Minute Consultation
+            <span class="btn-arrow"><svg class="icon"><use href="#icon-arrow" /></svg></span>
+          </a>
+          <p class="cta-note">Complimentary &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; Confidential</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="footer-logo" aria-label="EnerSoul Healing home">
+            <img src="assets/new_logo-removebg-preview.png" alt="EnerSoul Healing Logo" class="footer-logo__img" />
+          </a>
+          <p class="footer-tagline">A holistic emotional wellness practice where psychology and energy healing come together for deeper self-understanding and transformation.</p>
+        </div>
+
+        <div class="footer-links">
+  <h5>Navigate</h5>
+  <ul role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Manila</a></li>
+    <li><a href="index.html#section-modalities">Services</a></li>
+    <li><a href="blog.html">Insights / Blogs</a></li>
+  </ul>
+</div>
+
+        <div class="footer-links">
+          <h5>Connect</h5>
+          <ul role="list">
+            <li><a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" id="footer-book">Book a Consultation</a></li>
+            <li><a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" id="footer-email">hello@enersoulshealing.com</a></li>
+            <li><a href="#section-philosophy" id="footer-philosophy">EnerSoul Philosophy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EnerSoul Healing. All rights reserved.</p>
+        <span class="footer-lotus" aria-hidden="true">
+          <svg class="icon"><use href="#icon-lotus" /></svg>
+        </span>
+        <p style="font-family: 'Dancing Script', cursive; font-size: 1rem;" class="footer-mantra">You are healing. You are becoming.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65-157zM223.9 413.3c-33 0-65.4-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.9-28.1-99 0-96.1 78.2-174.4 174.4-174.4 51.4 0 99.8 20 136.1 56.4 36.3 36.4 56.4 84.8 56.4 136.2 0 96.2-78.2 174.4-174.4 174.4zm95.4-130.8c-5.2-2.6-30.9-15.3-35.7-17-4.8-1.7-8.3-2.6-11.8 2.6-3.5 5.2-13.5 17-16.6 20.5-3.1 3.5-6.1 4-11.3 1.3-5.2-2.6-22.1-8.2-42-26.2-15.5-14-26-31.3-29.1-36.5-3.1-5.2-.3-8 2.3-10.6 2.4-2.4 5.2-6.1 7.8-9.1 2.6-3.1 3.5-5.2 5.2-8.7 1.7-3.5.9-6.6-.4-9.2-1.3-2.6-11.8-28.5-16.1-39-4.3-10.3-8.7-8.9-11.8-9-3.1-.1-6.6-.1-10.1-.1-3.5 0-9.2 1.3-14 6.5-4.8 5.2-18.3 17.9-18.3 43.6 0 25.8 18.8 50.7 21.4 54.2 2.6 3.5 37 56.5 89.6 79.2 12.5 5.4 22.3 8.6 29.9 11 12.6 4 24.1 3.4 33.2 2.1 10.3-1.5 30.9-12.6 35.3-24.8 4.3-12.2 4.3-22.7 3-24.8-1.4-2.1-4.9-3.4-10.1-6.1z"/>
+    </svg>
+  </a>
+</body>
+
+
+</html>
