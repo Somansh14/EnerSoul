@@ -8,7 +8,7 @@ const desktopNav = `
 <ul class="nav-links" role="list">
   <li><a href="index.html">Home</a></li>
   <li><a href="about.html">About</a></li>
-  <li><a href="index.html#section-modalities">Services</a></li>
+  <li><a href="index.html#section-modalities">approach</a></li>
   <li><a href="blog.html">Insights</a></li>
 </ul>
 `.trim();
@@ -17,7 +17,7 @@ const mobileNav = `
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="index.html#section-modalities">Services</a>
+  <a href="index.html#section-modalities">approach</a>
   <a href="blog.html">Insights</a>
   <a href="about.html#section-philosophy">Philosophy</a>
   <a href="updates.html" class="btn btn--gold" style="margin-top:1rem;">Activities</a>
@@ -42,7 +42,7 @@ files.forEach(file => {
             const mobileEnd = content.indexOf('</div>', mobileStart) + '</div>'.length;
             content = content.substring(0, mobileStart) + mobileNav + content.substring(mobileEnd);
         }
-        
+
         // Let's add the active styles based on the filename
         if (file === 'blog.html' || file.startsWith('blog-')) {
             content = content.replace('<a href="blog.html">Insights</a>', '<a href="blog.html" style="color:var(--sage-deep)">Insights</a>');

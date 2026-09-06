@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const wa_link = 'https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.';
+const wa_link = 'https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.';
 
 const wa_float_html = `
   <!-- Floating WhatsApp Button -->
@@ -17,23 +17,23 @@ const dirPath = __dirname;
 const files = fs.readdirSync(dirPath);
 
 files.forEach(file => {
-    if (path.extname(file) === '.html') {
-        const filePath = path.join(dirPath, file);
-        let content = fs.readFileSync(filePath, 'utf8');
+  if (path.extname(file) === '.html') {
+    const filePath = path.join(dirPath, file);
+    let content = fs.readFileSync(filePath, 'utf8');
 
-        // 1. Update "Book a Call" links
-        content = content.replace(/href="#section-cta"/g, `href="${wa_link}" target="_blank"`);
-        content = content.replace(/href="index\.html#section-cta"/g, `href="${wa_link}" target="_blank"`);
-        
-        // Also the CTA email button
-        content = content.replace(/href="mailto:hello@enersoulshealing\.com"/g, `href="${wa_link}" target="_blank"`);
-        
-        // 2. Add floating WhatsApp button right before </body>
-        if (!content.includes('<!-- Floating WhatsApp Button -->')) {
-            content = content.replace('</body>', wa_float_html);
-        }
-        
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`Updated ${file}`);
+    // 1. Update "Book a Call" links
+    content = content.replace(/href="#section-cta"/g, `href="${wa_link}" target="_blank"`);
+    content = content.replace(/href="index\.html#section-cta"/g, `href="${wa_link}" target="_blank"`);
+
+    // Also the CTA email button
+    content = content.replace(/href="mailto:hello@enersoulshealing\.com"/g, `href="${wa_link}" target="_blank"`);
+
+    // 2. Add floating WhatsApp button right before </body>
+    if (!content.includes('<!-- Floating WhatsApp Button -->')) {
+      content = content.replace('</body>', wa_float_html);
     }
+
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Updated ${file}`);
+  }
 });
