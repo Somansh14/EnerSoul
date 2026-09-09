@@ -1,7 +1,7 @@
 import os
 import glob
 
-wa_link = 'https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.'
+wa_link = 'https://wa.me/919817835553?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.'
 
 wa_float_html = f'''
   <!-- Floating WhatsApp Button -->

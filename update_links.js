@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const wa_link = 'https://wa.me/919024952636?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.';
+const wa_link = 'https://wa.me/919817835553?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.';
 
 const wa_float_html = `
   <!-- Floating WhatsApp Button -->
