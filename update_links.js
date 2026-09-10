@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const wa_link = 'https://wa.me/919817835553?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20approach.';
+const wa_link = 'https://wa.me/919817835553?text=Hi%20Manila%2C%20I%20came%20across%20EnerSoul%20Healing%20and%20would%20like%20to%20request%20my%20first%20complimentary%2030-minute%20consultation.%20I%E2%80%99d%20love%20to%20have%20a%20conversation%20about%20what%20I%E2%80%99m%20currently%20experiencing%20and%20understand%20how%20we%20can%20work%20together.';
 
 const wa_float_html = `
   <!-- Floating WhatsApp Button -->

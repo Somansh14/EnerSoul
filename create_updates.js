@@ -18,15 +18,15 @@ let mainEnd = aboutContent.indexOf(endToken);
 if (mainEnd === -1) mainEnd = aboutContent.indexOf(endTokenUnix);
 
 if (mainStart === -1 || mainEnd === -1) {
-    console.error("Could not find section markers in about.html");
-    // fallback 1
-    mainStart = aboutContent.indexOf('<section id="hero"');
-    mainEnd = aboutContent.indexOf('<footer id="footer"');
-    
-    if (mainStart === -1 || mainEnd === -1) {
-        console.error("Could not find fallback section markers.");
-        process.exit(1);
-    }
+  console.error("Could not find section markers in about.html");
+  // fallback 1
+  mainStart = aboutContent.indexOf('<section id="hero"');
+  mainEnd = aboutContent.indexOf('<footer id="footer"');
+
+  if (mainStart === -1 || mainEnd === -1) {
+    console.error("Could not find fallback section markers.");
+    process.exit(1);
+  }
 }
 
 const headerPart = aboutContent.substring(0, mainStart);
@@ -92,10 +92,10 @@ const newMainContent = `
 
         <!-- Activity Card 3 -->
         <div class="update-card" style="flex: 1 1 320px; max-width: 400px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column;">
-          <img src="images/blog-3.jpg" alt="Workshop on Holistic Healing" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold);" onerror="this.src='assets/images/blog-3.jpg'">
+          <img src="images/blog-3.jpg" alt="Workshop on Enerygy healing" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold);" onerror="this.src='assets/images/blog-3.jpg'">
           <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
             <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block;">Recent Workshop</span>
-            <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Holistic Healing Retreat</h3>
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Enerygy healing Retreat</h3>
             <p style="color: var(--taupe); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
               We recently concluded a wonderful weekend retreat focusing on holistic approaches to healing trauma. Thank you to everyone who participated and made it a safe space.
             </p>

@@ -21,7 +21,7 @@ const mobileNav = `
   <a href="blog.html">Insights</a>
   <a href="about.html#section-philosophy">Philosophy</a>
   <a href="updates.html" class="btn btn--gold" style="margin-top:1rem;">Activities</a>
-  <a href="index.html#section-cta" class="btn btn--primary" style="margin-top:1rem;">Begin Our Journey</a>
+  <a href="index.html#section-cta" class="btn btn--primary" style="margin-top:1rem;">Begin Your Journey</a>
 </div>
 `.trim();
 

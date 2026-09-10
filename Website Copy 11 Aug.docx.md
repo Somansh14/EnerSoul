@@ -131,12 +131,12 @@ The goal is to become more connected with yourself. Using your healing journey a
 
 SECTION 7 — About   
 My picture   
-Short intro under my picture \- Counselling Psychologist | Reiki Grand Master | Holistic Healing Practitioner 
+Short intro under my picture \- Counselling Psychologist | Reiki Grand Master | Enerygy healing Practitioner 
 
 Short intro on the side: 
 
 **Hi, I'm Manila.**  
-I’m the founder of **EnerSoul Healing**, where psychology and holistic healing come together to support deeper self-understanding and transformation.  
+I’m the founder of **EnerSoul Healing**, where psychology and Enerygy healing come together to support deeper self-understanding and transformation.  
 Through my work, I help you explore your **thoughts, emotions, patterns and inner world**, reconnect with yourself, and create meaningful changes that support greater clarity, balance and well-being.
 
 **Remember, healing is a journey—and you don’t have to walk the path alone.**
