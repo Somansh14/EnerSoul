@@ -9,7 +9,7 @@ Sub heading:
 Sometimes we try to change what we feel without understanding what's creating it.  
 My role is to help you understand yourself more deeply, so that lasting change becomes possible.
 
-SECTION 2 —   
+SECTION 2    
 Heading: YOU MAY BE HERE BECAUSE...
 
 Card 1  
@@ -78,7 +78,7 @@ Healing
 *"Can I move forward differently?"*  
 Living with greater clarity, connection and freedom.
 
-SECTION 5 — How we work together  
+SECTION 5  How we work together  
 Heading  
 Understanding is only the beginning.  
 Subheading  
@@ -102,9 +102,9 @@ Different tools.
 One purpose.  
 To help you understand yourself, heal what no longer serves you, and move forward with greater clarity.
 
-Section 6 — What you'll carry forward
+Section 6  What you'll carry forward
 
-Every session is intended to leave you with something you can continue using in your everyday life—not just during our time together.
+Every session is intended to leave you with something you can continue using in your everyday lifenot just during our time together.
 
 Six Cards:
 
@@ -129,7 +129,7 @@ Simple practices you can continue using in your everyday life.
 Closing  
 The goal is to become more connected with yourself. Using your healing journey as a tool to navigate life. 
 
-SECTION 7 — About   
+SECTION 7  About   
 My picture   
 Short intro under my picture \- Counselling Psychologist | Reiki Grand Master | Enerygy healing Practitioner 
 
@@ -139,11 +139,11 @@ Short intro on the side:
 I’m the founder of **EnerSoul Healing**, where psychology and Enerygy healing come together to support deeper self-understanding and transformation.  
 Through my work, I help you explore your **thoughts, emotions, patterns and inner world**, reconnect with yourself, and create meaningful changes that support greater clarity, balance and well-being.
 
-**Remember, healing is a journey—and you don’t have to walk the path alone.**
+**Remember, healing is a journeyand you don’t have to walk the path alone.**
 
 CTA \- Read My Story
 
-SECTION 8 — Your First Step
+SECTION 8  Your First Step
 
 Every journey begins with a conversation.  
 Choosing the right support is an important decision, and it should never feel rushed.  
@@ -155,7 +155,7 @@ This conversation gives us the opportunity to:
 ✓ Decide together whether we're the right fit to work with each other.  
 If we decide to continue, i'll recommend the most suitable first session based on your needs and explain what you can expect moving forward.
 
-CTA \- Book Your Free 30-Minute Consultation 
+CTA \- Request Your First Free 30-Minute Consultation 
 
 Home \> About \> Learn \> Connect 
 
@@ -164,15 +164,15 @@ ABOUT (Long Version for about page)
 **Healing begins with understanding yourself.**
 
 Hi, I'm Manila, founder of **EnerSoul Healing**.  
-For almost eight years, I built my career in the corporate world—learning about people, behaviour, communication and the many ways we navigate life. From the outside, I was building a familiar and successful path. But somewhere along the way, I began to realise that there was another path calling me.
+For almost eight years, I built my career in the corporate worldlearning about people, behaviour, communication and the many ways we navigate life. From the outside, I was building a familiar and successful path. But somewhere along the way, I began to realise that there was another path calling me.
 
 A path that felt more deeply connected to who I was.  
-My own experiences with emotional pain, disconnection and healing became a turning point. They led me inward—to understand myself, to explore the deeper layers of healing, and eventually to recognise what I truly wanted to dedicate my life to.
+My own experiences with emotional pain, disconnection and healing became a turning point. They led me inwardto understand myself, to explore the deeper layers of healing, and eventually to recognise what I truly wanted to dedicate my life to.
 
 **I chose to leave behind the path I had known and follow a purpose that felt greater than a career.**
 
 That choice became the beginning of EnerSoul Healing.  
-My background in psychology gave me a deep understanding of the mind, human behaviour and emotional patterns. My own healing journey opened me to the deeper dimensions of inner work—exploring the relationship between the **mind, body, energy and inner self**.
+My background in psychology gave me a deep understanding of the mind, human behaviour and emotional patterns. My own healing journey opened me to the deeper dimensions of inner workexploring the relationship between the **mind, body, energy and inner self**.
 
 Today, I bring these worlds together.
 
@@ -200,16 +200,16 @@ EnerSoul Healing is an approach to inner work that brings together **psychology,
 It recognises that transformation isn't always limited to what we consciously think or understand. Our emotions, subconscious patterns, energy and deeper sense of self can all play a part in how we experience and navigate life.
 
 **WHAT ENERSOUL STANDS FOR**  
-**ENER** — the energy within and around us.  
-**SOUL** — the deeper dimension of who we are.  
-Together, **EnerSoul** represents working with both — exploring the inner layers that shape us and creating space for deeper alignment, healing and transformation.
+**ENER**  the energy within and around us.  
+**SOUL**  the deeper dimension of who we are.  
+Together, **EnerSoul** represents working with both  exploring the inner layers that shape us and creating space for deeper alignment, healing and transformation.
 
 **THE ENERSOUL PHILOSOPHY**  
-**Mind** — Understand and reshape thought patterns.  
-**Emotion** — Process what has been carried within.  
-**Energy** — Release, restore and realign.  
-**Subconscious** — Explore deeper patterns and conditioning.  
-**Soul** — Reconnect with meaning, purpose and inner truth.
+**Mind**  Understand and reshape thought patterns.  
+**Emotion**  Process what has been carried within.  
+**Energy**  Release, restore and realign.  
+**Subconscious**  Explore deeper patterns and conditioning.  
+**Soul**  Reconnect with meaning, purpose and inner truth.
 
 **THE AIM**  
 Not simply to help you feel better for a moment.  

@@ -7,8 +7,8 @@ const updatesPath = path.join(__dirname, 'updates.html');
 let aboutContent = fs.readFileSync(aboutPath, 'utf8');
 
 // Find the start of the content (after mobile menu) and the start of the footer
-const startToken = '  <!-- ════════════════════════════════════════\r\n       ABOUT HERO — SECTION 1';
-const startTokenUnix = '  <!-- ════════════════════════════════════════\n       ABOUT HERO — SECTION 1';
+const startToken = '  <!-- ════════════════════════════════════════\r\n       ABOUT HERO  SECTION 1';
+const startTokenUnix = '  <!-- ════════════════════════════════════════\n       ABOUT HERO  SECTION 1';
 let mainStart = aboutContent.indexOf(startToken);
 if (mainStart === -1) mainStart = aboutContent.indexOf(startTokenUnix);
 
@@ -33,7 +33,7 @@ const headerPart = aboutContent.substring(0, mainStart);
 const footerPart = aboutContent.substring(mainEnd);
 
 // Modify header part title
-const newHeaderPart = headerPart.replace('<title>About Manila — EnerSoul Healing</title>', '<title>Updates & Activities | EnerSoul Healing</title>');
+const newHeaderPart = headerPart.replace('<title>About Manila  EnerSoul Healing</title>', '<title>Updates & Activities | EnerSoul Healing</title>');
 
 // New main content
 const newMainContent = `

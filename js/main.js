@@ -1,11 +1,11 @@
 // ====================================================
-// ENERSOUL HEALING — Main JavaScript
+// ENERSOUL HEALING  Main JavaScript
 // ====================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // ════════════════════════════════════════
-  // 1. NAVBAR — Scroll behaviour & mobile toggle
+  // 1. NAVBAR  Scroll behaviour & mobile toggle
   // ════════════════════════════════════════
   const navbar = document.getElementById('navbar');
   const navToggle = document.getElementById('nav-toggle');
@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ════════════════════════════════════════
-  // 2. PARTICLE SYSTEM — REMOVED
+  // 2. PARTICLE SYSTEM  REMOVED
   // ════════════════════════════════════════
   // Particles removed per user request (distracting animations)
 
   // ════════════════════════════════════════
-  // 3. SCROLL REVEAL — Intersection Observer
+  // 3. SCROLL REVEAL  Intersection Observer
   // ════════════════════════════════════════
   const revealEls = document.querySelectorAll('.reveal');
   const staggerEls = document.querySelectorAll('.stagger-children');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   staggerEls.forEach(el => revealObserver.observe(el));
 
   // ════════════════════════════════════════
-  // 4. PARALLAX — REMOVED (distracting)
+  // 4. PARALLAX  REMOVED (distracting)
   // ════════════════════════════════════════
 
   // ════════════════════════════════════════
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 6. ACTIVE NAV LINK — Highlight on scroll
+  // 6. ACTIVE NAV LINK  Highlight on scroll
   // ════════════════════════════════════════
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(s => sectionObserver.observe(s));
 
   // ════════════════════════════════════════
-  // 7. TIMELINE — stagger timeline items
+  // 7. TIMELINE  stagger timeline items
   // ════════════════════════════════════════
   const timelineItems = document.querySelectorAll('.timeline-item');
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 8. REASON CARDS — entrance stagger
+  // 8. REASON CARDS  entrance stagger
   // ════════════════════════════════════════
   const reasonCards = document.querySelectorAll('.reason-card');
   const reasonObserver = new IntersectionObserver(entries => {
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 9. OUTCOME CARDS — entrance stagger
+  // 9. OUTCOME CARDS  entrance stagger
   // ════════════════════════════════════════
   const outcomeCards = document.querySelectorAll('.outcome-card');
   const outcomeObserver = new IntersectionObserver(entries => {
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 10. PILLAR CARDS — slide in
+  // 10. PILLAR CARDS  slide in
   // ════════════════════════════════════════
   const pillars = document.querySelectorAll('.pillar');
   const pillarObserver = new IntersectionObserver(entries => {
@@ -195,12 +195,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 11. CURSOR GLOW — REMOVED
+  // 11. CURSOR GLOW  REMOVED
   // ════════════════════════════════════════
   // Cursor glow effect removed per user request
 
   // ════════════════════════════════════════
-  // 12. MODALITY CARDS — stagger
+  // 12. MODALITY CARDS  stagger
   // ════════════════════════════════════════
   const modalityCards = document.querySelectorAll('.modality-card');
   const modalityObserver = new IntersectionObserver(entries => {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ════════════════════════════════════════
-  // 13. HERO EMBLEM — Transparent Background Keying
+  // 13. HERO EMBLEM  Transparent Background Keying
   // ════════════════════════════════════════
   (function initHeroEmblem() {
     const img = document.getElementById('hero-emblem-img');
