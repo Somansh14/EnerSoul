@@ -1135,9 +1135,9 @@ section {
 }
 
 /* ════════════════════════════════════════
-   SECTION: APPROACH TIMELINE
+   SECTION: Approach TIMELINE
 ════════════════════════════════════════ */
-#section-approach {
+#section-Approach {
   padding: 6rem 0;
   background: #FFFFFF;
   position: relative;
@@ -1145,7 +1145,7 @@ section {
 
 }
 
-#section-approach::before {
+#section-Approach::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -1156,17 +1156,17 @@ section {
   z-index: 0;
 }
 
-#section-approach>.container {
+#section-Approach>.container {
   position: relative;
   z-index: 1;
 }
 
-.approach-intro {
+.Approach-intro {
   text-align: center;
   margin-bottom: 5rem;
 }
 
-.approach-intro .start-label {
+.Approach-intro .start-label {
   display: inline-block;
   background: rgba(196, 169, 108, 0.27);
   border: 1px solid rgba(196, 169, 108, 0.54);
@@ -2343,7 +2343,7 @@ section {
   /* ── Sections general ── */
   #section-reasons,
   #section-change,
-  #section-approach,
+  #section-Approach,
   #section-modalities,
   #section-outcomes,
   #section-about,
@@ -2620,7 +2620,7 @@ section {
   /* ── Sections ── */
   #section-reasons,
   #section-change,
-  #section-approach,
+  #section-Approach,
   #section-modalities,
   #section-outcomes,
   #section-about,

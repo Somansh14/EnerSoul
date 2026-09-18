@@ -12,7 +12,7 @@ Over time, practitioners face and gradually overcome various temptations that ar
 
 Contrary to what some might believe, practicing M*auna* does not necessitate complete isolation from the world or abandoning one’s daily responsibilities. It is about consciously incorporating moments of silence into everyday life. Here are some practical ways to integrate M*auna*:
 
-**1\. Dedicated Silent Hours:** Identify times in your daily schedule when you can dedicate an hour to silence. This could be a single hour in the morning or evening, or split into two sessions—one in the morning and one in the evening. During this hour, do not indulge into conversations with others and yourselves, try not to speak at all, do not use your phone, or watch TV. You may indulge in meditation, breathing exercises, yoga *aasanas (poses)*, long walks, or just sit or lie down and be with yourself.&nbsp;
+**1\. Dedicated Silent Hours:** Identify times in your daily schedule when you can dedicate an hour to silence. This could be a single hour in the morning or evening, or split into two sessionsone in the morning and one in the evening. During this hour, do not indulge into conversations with others and yourselves, try not to speak at all, do not use your phone, or watch TV. You may indulge in meditation, breathing exercises, yoga *aasanas (poses)*, long walks, or just sit or lie down and be with yourself.&nbsp;
 
 **2\. Silent Meals:** Make mealtime a silent practice. Avoid using phones, talking, or watching anything. Allow it to be a time where it is just you and the food, fostering a mindful eating experience.
 

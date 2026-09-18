@@ -16,7 +16,7 @@ And I have learnt that these experiences are not necessarily signs that meditati
 
 **When the mind refuses to be quiet:**&nbsp;
 
-One of the first things meditation can show us is how restless the mind actually is. We are so used to constantly doing something—working, scrolling, talking, planning, solving that simply sitting still can feel unfamiliar. The moment we stop distracting ourselves, the mind gets louder. The answer isn't to fight every thought. It is to notice it. A thought comes. You notice it. You return to the breath. Another thought comes. You notice that too. You return again.&nbsp;
+One of the first things meditation can show us is how restless the mind actually is. We are so used to constantly doing somethingworking, scrolling, talking, planning, solving that simply sitting still can feel unfamiliar. The moment we stop distracting ourselves, the mind gets louder. The answer isn't to fight every thought. It is to notice it. A thought comes. You notice it. You return to the breath. Another thought comes. You notice that too. You return again.&nbsp;
 
 Meditation isn't necessarily about having no thoughts.
 
@@ -90,7 +90,7 @@ And some days, nothing particularly remarkable may happen at all.
 
 The value of meditation may not always be found in what we feel **during** those few minutes.
 
-Sometimes, we notice its influence much later—in the pause before reacting, in the ability to sit with an uncomfortable thought, in becoming aware of an emotion before it takes over, or simply in feeling a little more present in our own lives.
+Sometimes, we notice its influence much laterin the pause before reacting, in the ability to sit with an uncomfortable thought, in becoming aware of an emotion before it takes over, or simply in feeling a little more present in our own lives.
 
 **Perhaps meditation is not about becoming someone else\!**
 

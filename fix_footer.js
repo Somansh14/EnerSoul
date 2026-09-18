@@ -10,7 +10,7 @@ const footerNav = `
   <ul role="list">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Manila</a></li>
-    <li><a href="index.html#section-modalities">approach</a></li>
+    <li><a href="index.html#section-modalities">Approach</a></li>
     <li><a href="updates.html">Updates</a></li>
     <li><a href="blog.html">Insights / Blogs</a></li>
   </ul>

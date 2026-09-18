@@ -68,7 +68,7 @@ The cognitive understanding and the attachment system do not always move at the 
 
 One psychological mechanism that can help explain some of these relationships is **intermittent reinforcement**.
 
-When affection, attention or reassurance are unpredictable—sometimes present and sometimes withdrawn—they can become especially psychologically salient.
+When affection, attention or reassurance are unpredictablesometimes present and sometimes withdrawnthey can become especially psychologically salient.
 
 You don't know when the next moment of closeness will come.
 

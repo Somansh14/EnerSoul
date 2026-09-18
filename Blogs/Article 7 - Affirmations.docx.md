@@ -6,7 +6,7 @@ Life doesn't always look the way we want it to.
 
 There are days when everything feels aligned, and there are days when we question ourselves, our choices, our relationships, and even the direction in which life is moving. Over the years, I have realised that we cannot always control what happens around us, but we can consciously choose what we repeat within ourselves.
 
-For me, affirmations are not about pretending that everything is perfect. They are gentle reminders of the person I want to be, the life I want to create, and the beliefs I want to return to—especially on difficult days.
+For me, affirmations are not about pretending that everything is perfect. They are gentle reminders of the person I want to be, the life I want to create, and the beliefs I want to return toespecially on difficult days.
 
 These are the affirmations I practise every day, regardless of what I may be going through:
 
@@ -29,7 +29,7 @@ I choose to see abundance not only as material success, but also as opportunitie
 I choose relationships that allow love, understanding, respect and space for everyone to simply be themselves.
 
 **7\. I love and respect myself and everyone around me.**  
-Self-love does not have to come at the cost of loving others. I believe both can exist together—with healthy boundaries and genuine respect.
+Self-love does not have to come at the cost of loving others. I believe both can exist togetherwith healthy boundaries and genuine respect.
 
 **8\. I prioritise my mental peace above everything.**  
 Not every argument needs my participation. Not every situation needs my reaction. Sometimes protecting my peace is the most powerful choice I can make.
@@ -53,13 +53,13 @@ Not because everything is perfect.
 
 But because I choose to believe that **the way I speak to myself matters.**
 
-If you'd like, I can also make this **more “Manila/EnerSoul Healing” in voice**—slightly deeper, more psychological and spiritual, and less like a conventional affirmation article.
+If you'd like, I can also make this **more “Manila/EnerSoul Healing” in voice**slightly deeper, more psychological and spiritual, and less like a conventional affirmation article.
 
 **An Important Note**
 
 Affirmations are not meant to deny difficult emotions or convince ourselves that everything is fine when it isn't. Healing also means allowing ourselves to acknowledge what we are genuinely feeling.
 
-Use these affirmations as gentle reminders—not as a replacement for processing emotions, seeking support, or taking necessary action in your life.
+Use these affirmations as gentle remindersnot as a replacement for processing emotions, seeking support, or taking necessary action in your life.
 
 You may not believe every affirmation when you first begin. That is okay. Read them slowly, consistently and with awareness. Over time, they can become a more compassionate way of speaking to yourself and reconnecting with the possibilities within you.
 

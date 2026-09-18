@@ -20,7 +20,7 @@ That distinction changed everything for me.
 
 Meditation gave me a little distance from my own mind. I began noticing how quickly a thought could become an emotion, how an emotion could influence a reaction, and how often I was responding to life from patterns I hadn't even consciously recognised.
 
-With regular practice, I began becoming more aware of myself—not just when I was sitting with my eyes closed, but in everyday life.
+With regular practice, I began becoming more aware of myselfnot just when I was sitting with my eyes closed, but in everyday life.
 
 I became more aware of my reactions.
 

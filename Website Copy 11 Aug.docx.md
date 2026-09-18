@@ -196,7 +196,7 @@ EnerSoul Healing:
 
 **WHAT IS ENERSOUL HEALING?**  
 **Where Energy Meets Psychology.**  
-EnerSoul Healing is an approach to inner work that brings together **psychology, energy work and spiritual growth** to explore the different layers of our experience.  
+EnerSoul Healing is an Approach to inner work that brings together **psychology, energy work and spiritual growth** to explore the different layers of our experience.  
 It recognises that transformation isn't always limited to what we consciously think or understand. Our emotions, subconscious patterns, energy and deeper sense of self can all play a part in how we experience and navigate life.
 
 **WHAT ENERSOUL STANDS FOR**  

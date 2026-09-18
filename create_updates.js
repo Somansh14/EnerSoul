@@ -97,7 +97,7 @@ const newMainContent = `
             <span style="color: var(--gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block;">Recent Workshop</span>
             <h3 style="margin: 0 0 1rem 0; font-size: 1.6rem; color: var(--forest); font-family: var(--font-display);">Enerygy healing Retreat</h3>
             <p style="color: var(--taupe); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-              We recently concluded a wonderful weekend retreat focusing on holistic approaches to healing trauma. Thank you to everyone who participated and made it a safe space.
+              We recently concluded a wonderful weekend retreat focusing on holistic Approaches to healing trauma. Thank you to everyone who participated and made it a safe space.
             </p>
             <div style="border-top: 1px solid rgba(196,169,108,0.3); padding-top: 1rem;">
                 <p style="color: var(--sage-deep); font-size: 0.95rem; margin-bottom: 0;"><strong>Status:</strong> Completed successfully</p>
